@@ -1,0 +1,108 @@
+[
+  {
+    "image": "html",
+    "name": "HTML"
+  },
+  {
+    "image": "css",
+    "name": "CSS"
+  },
+  {
+    "image": "js",
+    "name": "JS"
+  },
+  {
+    "image": "php",
+    "name": "PHP"
+  },
+  {
+    "image": "scss",
+    "name": "SCSS"
+  },
+  {
+    "image": "tailwind",
+    "name": "Tailwind"
+  },
+  {
+    "image": "alpine_js",
+    "name": "Alpine.js"
+  },
+  {
+    "image": "vue_js",
+    "name": "Vue.js"
+  },
+  {
+    "image": "react",
+    "name": "React.js"
+  },
+  {
+    "image": "react",
+    "name": "React Native"
+  },
+  {
+    "image": "next_js",
+    "name": "Next.js"
+  },
+  {
+    "image": "svelte",
+    "name": "Svelte"
+  },
+  {
+    "image": "symfony",
+    "name": "Symfony"
+  },
+  {
+    "image": "twig",
+    "name": "Twig"
+  },
+  {
+    "image": "three_js",
+    "name": "Three.js"
+  },
+  {
+    "image": "docker",
+    "name": "Docker"
+  },
+  {
+    "image": "node_js",
+    "name": "Node.js"
+  },
+  {
+    "image": "git",
+    "name": "Git"
+  },
+  {
+    "image": "github_white",
+    "name": "GitHub"
+  },
+  {
+    "image": "storybook",
+    "name": "Storybook"
+  },
+  {
+    "name": "Atomic Design"
+  },
+  {
+    "name": "Component Design"
+  },
+  {
+    "image": "figma",
+    "name": "Figma"
+  },
+  {
+    "image": "illustrator",
+    "name": "Illustrator"
+  },
+  {
+    "image": "photoshop",
+    "name": "Photoshop"
+  },
+  {
+    "image": "premiere_pro",
+    "name": "Première Pro"
+  },
+  {
+    "image": "after_effects",
+    "name": "After Effects"
+  }
+]

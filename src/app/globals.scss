@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Yipes';
+    src:
+            url('/fonts/yipes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yipes';
+    src:
+            url('/fonts/yipes-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+* {
+    @apply m-0 p-0 box-border font-poppins scroll-smooth;
+}
+
+.bg-blue-pattern {
+    background-image: url('/images/blue_pattern.png');
+}
+
+.projectCard {;
+    &__image {
+        @apply hidden;
+    }
+    &:hover {
+        .projectCard__image {
+            @apply block transform transition duration-500 scale-125;
+        }
+    }
+}
