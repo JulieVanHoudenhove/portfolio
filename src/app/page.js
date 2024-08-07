@@ -31,16 +31,72 @@ export default function Home() {
                 </div>
             </section>
             <section>
-                <div className="swiper">
-                    <div className="swiper-wrapper bg-dark text-white font-yipes">
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1"><Image width={22} height={32} src="/images/swiper-star.png" alt="étoile" /></div>
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1">Web Developer</div>
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1"><Image width={22} height={32} src="/images/swiper-star.png" alt="étoile" /></div>
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1">Mobile App Developer</div>
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1"><Image width={22} height={32} src="/images/swiper-star.png" alt="étoile" /></div>
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1">Front-end Developer</div>
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1"><Image width={22} height={32} src="/images/swiper-star.png" alt="étoile" /></div>
-                        <div className="swiper-slide font-yipes font-sm px-6 py-1">Creative Developer</div>
+                <div className="slider-home">
+                    <div className="slide-track">
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
+                        </div>
+                        <div className="slide">
+                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
+                        </div>
                     </div>
                 </div>
             </section>
