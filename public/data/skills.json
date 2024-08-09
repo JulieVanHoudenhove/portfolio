@@ -1,107 +1,134 @@
 [
   {
+    "id": 1,
     "image": "html",
     "name": "HTML"
   },
   {
+    "id": 2,
     "image": "css",
     "name": "CSS"
   },
   {
+    "id": 3,
     "image": "js",
     "name": "JS"
   },
   {
+    "id": 4,
     "image": "php",
     "name": "PHP"
   },
   {
+    "id": 5,
     "image": "scss",
     "name": "SCSS"
   },
   {
+    "id": 6,
     "image": "tailwind",
     "name": "Tailwind"
   },
   {
+    "id": 7,
     "image": "alpine_js",
     "name": "Alpine.js"
   },
   {
+    "id":  8,
     "image": "vue_js",
     "name": "Vue.js"
   },
   {
+    "id":  9,
     "image": "react",
     "name": "React.js"
   },
   {
+    "id": 10,
     "image": "react",
     "name": "React Native"
   },
   {
+    "id": 11,
     "image": "next_js",
     "name": "Next.js"
   },
   {
+    "id": 12,
     "image": "svelte",
     "name": "Svelte"
   },
   {
+    "id": 13,
     "image": "symfony",
     "name": "Symfony"
   },
   {
+    "id": 14,
     "image": "twig",
     "name": "Twig"
   },
   {
+    "id": 15,
     "image": "three_js",
     "name": "Three.js"
   },
   {
+    "id": 16,
     "image": "docker",
     "name": "Docker"
   },
   {
+    "id": 17,
     "image": "node_js",
     "name": "Node.js"
   },
   {
+    "id": 18,
     "image": "git",
     "name": "Git"
   },
   {
+    "id": 19,
     "image": "github_white",
     "name": "GitHub"
   },
   {
+    "id": 20,
     "image": "storybook",
     "name": "Storybook"
   },
   {
+    "id": 21,
     "name": "Atomic Design"
   },
   {
+    "id": 22,
     "name": "Component Design"
   },
   {
+    "id": 23,
     "image": "figma",
     "name": "Figma"
   },
   {
+    "id": 24,
     "image": "illustrator",
     "name": "Illustrator"
   },
   {
+    "id": 25,
     "image": "photoshop",
     "name": "Photoshop"
   },
   {
+    "id": 26,
     "image": "premiere_pro",
     "name": "Première Pro"
   },
   {
+    "id": 27,
     "image": "after_effects",
     "name": "After Effects"
   }
