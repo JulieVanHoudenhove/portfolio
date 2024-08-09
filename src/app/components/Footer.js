@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from "next/link";
 
 const Footer = () => {
 
@@ -66,13 +67,17 @@ const Footer = () => {
                 <h2 className="font-yipes text-2xl py-32">Comment puis-je vous aider ?</h2>
                 <div className="flex flex-col gap-4 items-start w-full px-56 pb-20">
                     <p className="text-xs max-w-[739px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies odio et massa semper, ut placerat nisi posuere. Sed euismod justo sit amet lorem hendrerit, non eleifend diam sodales.</p>
-                    <a href="mailto:#" className="font-bold text-xs underline">Pour m'écrire un email de fifou</a>
+                    <Link href="mailto:#" className="font-bold text-xs underline">Pour m'écrire un email de fifou</Link>
                 </div>
                 <div className="w-full border-t border-dark"></div>
-                <div className="w-full flex justify-between items-center px-56 py-14">
-                    <p className="text-xs">© JulieVH - 2024</p>
-                    <Image height={62} width={42} src="/images/double_stars.png" alt="deux étoiles" />
-                    <a href="#" className="font-bold text-xs underline">Mentions Légales</a>
+                <div className="w-full grid grid-cols-12 items-center px-56 py-14">
+                    <p className="text-xs col-span-4">© JulieVH - 2024</p>
+                    <Image className="col-span-4 justify-self-center" height={62} width={42} src="/images/double_stars.png" alt="deux étoiles" />
+                    <div className="text-xs col-span-4 justify-self-end flex gap-2">
+                        <Link href="#" className="font-bold text-xs underline">Mentions Légales</Link>
+                        <p>-</p>
+                        <Link href="#" className="font-bold text-xs underline">Site Map</Link>
+                    </div>
                 </div>
             </footer>
         </>

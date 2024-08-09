@@ -1,10 +1,32 @@
+"use client";
+
 import Header from "@/app/components/Header";
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import ProjectCard from "@/app/components/ProjectCard";
 import SkillCard from "@/app/components/SkillCard";
+import {useEffect, useState} from "react";
 
 export default function Home() {
+    const [skillsData, setSkillsData] = useState([]);
+    const [skillsBisData, setSkillsBisData] = useState([]);
+
+    useEffect(() => {
+        const fetchSkills = async () => {
+            const response = await fetch('/data/skills.json');
+            const data = await response.json();
+            setSkillsData(data);
+        };
+
+        const fetchSkillsBis = async () => {
+            const response = await fetch('/data/skills_bis.json');
+            const data = await response.json();
+            setSkillsBisData(data);
+        };
+
+        fetchSkills();
+        fetchSkillsBis();
+    }, []);
     return (
         <main>
             <Header background={"blue-pattern"} />
@@ -106,9 +128,9 @@ export default function Home() {
             </section>
             <section id="competences" className="flex flex-col items-center bg-blue-pattern">
                 <h2 className="font-yipes text-2xl text-white py-32">Compétences</h2>
-                <SkillCard jsonFileName={'skills.json'}/>
+                <SkillCard skills={skillsData} />
                 <div className="border-t border-white w-[70%]"></div>
-                <SkillCard jsonFileName={'skills_bis.json'} />
+                <SkillCard skills={skillsBisData} />
             </section>
             <Footer />
         </main>

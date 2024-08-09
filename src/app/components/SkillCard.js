@@ -1,22 +1,7 @@
-"use client";
-
-import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Image from "next/image";
 
-const Skills = ({ jsonFileName }) => {
-    const [skills, setSkills] = useState([]);
-
-    useEffect(() => {
-        const fetchSkills = async () => {
-            const response = await fetch(`/data/${jsonFileName}`);
-            const data = await response.json();
-            setSkills(data);
-        };
-
-        fetchSkills();
-    }, [jsonFileName]);
-
+const Skills = ({ skills }) => {
     return (
         <main className="w-full flex justify-start flex-row flex-wrap px-56 py-16 gap-9">
             {skills.map(skill => (
@@ -32,7 +17,12 @@ const Skills = ({ jsonFileName }) => {
 };
 
 Skills.propTypes = {
-    jsonFileName: PropTypes.string.isRequired,
+    skills: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            image: PropTypes.string,
+        })
+    ).isRequired,
 };
 
 export default Skills;
