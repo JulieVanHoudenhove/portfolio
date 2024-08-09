@@ -1,15 +1,17 @@
 "use client";
 
+import { useEffect, useState } from 'react';
 import Header from "@/app/components/Header";
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import ProjectCard from "@/app/components/ProjectCard";
 import SkillCard from "@/app/components/SkillCard";
-import {useEffect, useState} from "react";
+import Link from "next/link";
 
 export default function Home() {
     const [skillsData, setSkillsData] = useState([]);
     const [skillsBisData, setSkillsBisData] = useState([]);
+    const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         const fetchSkills = async () => {
@@ -24,9 +26,17 @@ export default function Home() {
             setSkillsBisData(data);
         };
 
+        const fetchProjects = async () => {
+            const response = await fetch('/data/projects.json');
+            const data = await response.json();
+            setProjects(data);
+        };
+
         fetchSkills();
         fetchSkillsBis();
+        fetchProjects();
     }, []);
+
     return (
         <main>
             <Header background={"blue-pattern"} />
@@ -42,7 +52,7 @@ export default function Home() {
                             <p className="text-md font-medium">Développeuse web</p>
                             <p className="text-xs max-w-[739px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent  ultricies odio et massa semper, ut placerat nisi posuere. Sed euismod  justo sit amet lorem hendrerit, non eleifend diam sodales.</p>
                         </div>
-                        <a href="#" className="font-bold text-xs underline">Telecharger sans hesiter mon super CV de la mort qui tue</a>
+                        <Link target="_blank" href="#" className="font-bold text-xs underline flex gap-2">Télécharger sans hésiter mon super CV de la mort qui tue<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
                         <div className="flex gap-4">
                             <Image src="/images/computer.svg" height={71} width={72} alt="Icône d'ordinateur" />
                             <Image src="/images/laptop.svg" height={71} width={72} alt="Icône d'ordinateur portable" />
@@ -52,71 +62,71 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="a_propos">
                 <div className="slider-home">
                     <div className="slide-track">
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
                         </div>
                         <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper-star.png" alt="étoile" />
+                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
                             <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
                         </div>
                     </div>
@@ -124,15 +134,26 @@ export default function Home() {
             </section>
             <section id="projets" className="flex flex-col items-center bg-cream">
                 <h2 className="font-yipes text-2xl py-32">Projets</h2>
-                <ProjectCard />
+                {projects.length > 0 ? (
+                    projects.map(project => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))
+                ) : (
+                    <p>Loading projects...</p>
+                )}
+                <div className="h-40 w-full border-t border-dark"></div>
             </section>
             <section id="competences" className="flex flex-col items-center bg-blue-pattern">
-                <h2 className="font-yipes text-2xl text-white py-32">Compétences</h2>
-                <SkillCard skills={skillsData} />
-                <div className="border-t border-white w-[70%]"></div>
-                <SkillCard skills={skillsBisData} />
+                <h2 className="font-yipes text-2xl text-white pt-32">Compétences</h2>
+                <div className="flex flex-col items-center pt-16 pb-16">
+                    <SkillCard skills={skillsData} />
+                    <div className="border-t border-white w-[70%]"></div>
+                    <SkillCard skills={skillsBisData} />
+                </div>
             </section>
-            <Footer />
+            <section id="contact">
+                <Footer />
+            </section>
         </main>
     );
 }
