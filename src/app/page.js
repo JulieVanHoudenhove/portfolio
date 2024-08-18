@@ -50,9 +50,9 @@ export default function Home() {
                         <h1 className="font-yipes text-2xl">Julie<br />Van Houdenhove</h1>
                         <div className="flex flex-col gap-4">
                             <p className="text-md font-medium">Développeuse web</p>
-                            <p className="text-xs max-w-[739px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent  ultricies odio et massa semper, ut placerat nisi posuere. Sed euismod  justo sit amet lorem hendrerit, non eleifend diam sodales.</p>
+                            <p className="text-xs max-w-[739px]">Étudiante en développement web, je suis aussi développeuse frontend en alternance. J’aime relever des défis techniques et donner vie à des projets web à la fois élégants et fonctionnels.</p>
                         </div>
-                        <Link target="_blank" href="#" className="font-bold text-xs underline flex gap-2">Télécharger sans hésiter mon super CV de la mort qui tue<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
+                        <Link target="_blank" href="#" className="font-bold text-xs underline flex gap-2">Téléchargez mon CV sans hésiter !<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
                         <div className="flex gap-4">
                             <Image src="/images/computer.svg" height={71} width={72} alt="Icône d'ordinateur" />
                             <Image src="/images/laptop.svg" height={71} width={72} alt="Icône d'ordinateur portable" />

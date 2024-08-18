@@ -15,7 +15,7 @@ const ProjectCard = ({ project, background }) => {
                     alt={project.title}
                     width={150}
                     height={100}
-                    className="projectCard__image absolute -top-1/2 -right-3/4 -rotate-45"
+                    className="projectCard__image absolute -top-1/2 -right-[65%] -rotate-45"
                 />
             </div>
             <p className="text-xs">{project.description}</p>
