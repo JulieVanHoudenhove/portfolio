@@ -6,20 +6,16 @@ import Image from "next/image";
 import ProjectCard from "@/app/components/ProjectCard";
 
 export default async function ProjectPage({ params }) {
-    // Fonction pour obtenir un projet spécifique
     async function getProject(slug) {
-        const response = await fetch('http://localhost:3000/data/projects.json');
+        const response = await fetch('http://julie-vh.fr/data/projects.json');
         const projects = await response.json();
         return projects.find(project => project.slug === slug);
     }
 
-    // Fonction pour obtenir les autres projets
     async function getOtherProjects(currentSlug) {
-        const response = await fetch('http://localhost:3000/data/projects.json');
+        const response = await fetch('http://julie-vh.fr/data/projects.json');
         const projects = await response.json();
-        // Filtrer les projets pour exclure celui dont le slug est `currentSlug`
         const filteredProjects = projects.filter(project => project.slug !== currentSlug);
-        // Mélanger les projets et retourner les 3 premiers
         return filteredProjects.sort(() => 0.5 - Math.random()).slice(0, 3);
     }
 
@@ -30,7 +26,7 @@ export default async function ProjectPage({ params }) {
     }
 
     const skills = project.skills && Array.isArray(project.skills) ? project.skills : [];
-    const allSkills = await fetch('http://localhost:3000/data/skills.json').then(res => res.json());
+    const allSkills = await fetch('http://julie-vh.fr/data/skills.json').then(res => res.json());
     const filteredSkills = allSkills.filter(skill => skills.includes(skill.name));
 
     // Obtenir les autres projets
