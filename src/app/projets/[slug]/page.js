@@ -12,13 +12,13 @@ export const metadata = {
 
 export default async function ProjectPage({ params }) {
     async function getProject(slug) {
-        const response = await fetch('http://julie-vh.fr/data/projects.json');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/projects.json`);
         const projects = await response.json();
         return projects.find(project => project.slug === slug);
     }
 
     async function getOtherProjects(currentSlug) {
-        const response = await fetch('http://julie-vh.fr/data/projects.json');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/projects.json`);
         const projects = await response.json();
         const filteredProjects = projects.filter(project => project.slug !== currentSlug);
         return filteredProjects.sort(() => 0.5 - Math.random()).slice(0, 3);
@@ -31,7 +31,7 @@ export default async function ProjectPage({ params }) {
     }
 
     const skills = project.skills && Array.isArray(project.skills) ? project.skills : [];
-    const allSkills = await fetch('http://julie-vh.fr/data/skills.json').then(res => res.json());
+    const allSkills = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/skills.json`).then(res => res.json());
     const filteredSkills = allSkills.filter(skill => skills.includes(skill.name));
 
     // Obtenir les autres projets
