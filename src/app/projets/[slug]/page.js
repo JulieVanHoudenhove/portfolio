@@ -5,6 +5,11 @@ import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import ProjectCard from "@/app/components/ProjectCard";
 
+export const metadata = {
+    title: "oui - Julie VAN HOUDENHOVE",
+    description: "oui oui",
+};
+
 export default async function ProjectPage({ params }) {
     async function getProject(slug) {
         const response = await fetch('http://julie-vh.fr/data/projects.json');
