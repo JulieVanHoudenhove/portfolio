@@ -41,7 +41,7 @@ const Header = ({ background }) => {
                 <Link className="font-yipes px-6 py-1 text-md" href="/">Julie</Link>
                 <ul className="text-xs flex gap-8">
                     <li>
-                        <Link className='px-6 py-1 flex items-center min-h-14' href="/#a_propos">
+                        <Link className='px-6 py-1 flex items-center min-h-14 transition hover:opacity-70' href="/#a_propos">
                             À propos
                             {activeSection === 'a_propos' ? (
                                 <Image src={`/images/menu_star${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Actif" height={48} width={42} />
@@ -51,7 +51,7 @@ const Header = ({ background }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link className='px-6 py-1 flex items-center min-h-14' href="/#projets">
+                        <Link className='px-6 py-1 flex items-center min-h-14 transition hover:opacity-70' href="/#projets">
                             Projets
                             {(activeSection === 'projets' || currentPath.startsWith('/projets')) ? (
                                 <Image src={`/images/menu_star${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Actif" height={48} width={42} />
@@ -61,7 +61,7 @@ const Header = ({ background }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link className='px-6 py-1 flex items-center min-h-14' href="/#competences">
+                        <Link className='px-6 py-1 flex items-center min-h-14 transition hover:opacity-70' href="/#competences">
                             Compétences
                             {activeSection === 'competences' ? (
                                 <Image src={`/images/menu_star${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Actif" height={48} width={42} />
@@ -71,7 +71,7 @@ const Header = ({ background }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link className='px-6 py-1 flex items-center min-h-14' href="/#contact">
+                        <Link className='px-6 py-1 flex items-center min-h-14 transition hover:opacity-70' href="/#contact">
                             Contact
                             {activeSection === 'contact' ? (
                                 <Image src={`/images/menu_star${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Actif" height={48} width={42} />
@@ -82,8 +82,8 @@ const Header = ({ background }) => {
                     </li>
                 </ul>
                 <ul className="flex gap-10">
-                    <li><Link href="https://github.com/JulieVanHoudenhove" target="_blank"><Image src={`../images/github${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Logo GitHub" height={32} width={32} /></Link></li>
-                    <li><Link href="https://www.linkedin.com/in/julie-van-houdenhove/" target="_blank"><Image src={`../images/linkedin${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Logo LinkedIn" height={32} width={32} /></Link></li>
+                    <li><Link href="https://github.com/JulieVanHoudenhove" target="_blank"><Image className='hover:opacity-70 transition' src={`../images/github${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Logo GitHub" height={32} width={32} /></Link></li>
+                    <li><Link href="https://www.linkedin.com/in/julie-van-houdenhove/" target="_blank"><Image className='hover:opacity-70 transition' src={`../images/linkedin${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Logo LinkedIn" height={32} width={32} /></Link></li>
                 </ul>
             </nav>
         </header>
