@@ -134,6 +134,18 @@ body, html {
     pointer-events: none;
     z-index: 999;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
 }
 
+.link-hover #custom-cursor {
+    width: 6px;
+    height: 6px;
+}
+
+.link-hover #custom-cursor-circle {
+    width: 60px;
+    height: 60px;
+}
+a {
+    cursor: none; /* Enlève le curseur pointer par défaut */
+}

@@ -24,6 +24,17 @@ export default function Cursor() {
             cursor.style.top = `${mouseY}px`;
         });
 
+        function handleHover(event) {
+            if (event.target.tagName === 'A' || event.target.closest('a')) {
+                document.body.classList.add('link-hover');
+            } else {
+                document.body.classList.remove('link-hover');
+            }
+        }
+
+        document.addEventListener('mouseover', handleHover);
+        document.addEventListener('mouseout', handleHover);
+
         function animateCircle() {
             circleX += (mouseX - circleX) * 0.3;
             circleY += (mouseY - circleY) * 0.3;
@@ -35,6 +46,11 @@ export default function Cursor() {
         }
 
         animateCircle();
+
+        return () => {
+            document.removeEventListener('mouseover', handleHover);
+            document.removeEventListener('mouseout', handleHover);
+        };
     }, []);
 
     return null;
