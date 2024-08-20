@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content={metadata.description} />
-                <link rel="icon" href="/images/menu_star.svg" type="image/x-icon" sizes="16x16"/>
+                <link rel="icon" href="/images/icon_stars.svg" type="image/x-icon" sizes="16x16"/>
             </head>
             <body>
                 <Cursor />
