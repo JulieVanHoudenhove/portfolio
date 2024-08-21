@@ -149,3 +149,7 @@ body, html {
 a {
     cursor: none; /* Enlève le curseur pointer par défaut */
 }
+
+.msg-wrapper {
+    white-space: pre-wrap;
+}

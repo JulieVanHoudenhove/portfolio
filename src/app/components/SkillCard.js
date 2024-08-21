@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Skills = ({ skills }) => {
     return (
-        <main className="w-full flex justify-start flex-row flex-wrap px-56 py-16 gap-9">
+        <>
             {skills.map(skill => (
                 <div key={skill.name} className="bg-dark flex flex-col items-center justify-center gap-2.5 py-4 px-6 rounded-lg min-h-[102px]">
                     {skill.image && (
@@ -12,7 +12,7 @@ const Skills = ({ skills }) => {
                     <p className="text-white text-xs">{skill.name}</p>
                 </div>
             ))}
-        </main>
+        </>
     );
 };
 

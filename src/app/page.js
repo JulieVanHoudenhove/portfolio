@@ -52,7 +52,7 @@ export default function Home() {
                             <p className="text-md font-medium">Développeuse web</p>
                             <p className="text-xs max-w-[739px]">Étudiante en développement web, je suis aussi développeuse frontend en alternance. J’aime relever des défis techniques et donner vie à des projets web à la fois élégants et fonctionnels.</p>
                         </div>
-                        <Link target="_blank" href="#" className="font-bold text-xs underline hover:opacity-70 transition flex gap-2">Téléchargez mon CV sans hésiter !<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
+                        <Link target="_blank" href="/pdf/CV_Julie_VAN_HOUDENHOVE.pdf" className="font-bold text-xs underline hover:opacity-70 transition flex gap-2">Téléchargez mon CV sans hésiter !<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
                         <div className="flex gap-4">
                             <Image src="/images/computer.svg" height={71} width={72} alt="Icône d'ordinateur" />
                             <Image src="/images/laptop.svg" height={71} width={72} alt="Icône d'ordinateur portable" />
@@ -146,9 +146,13 @@ export default function Home() {
             <section id="competences" className="flex flex-col items-center bg-blue-pattern">
                 <h2 className="font-yipes text-2xl text-white pt-36">Compétences</h2>
                 <div className="flex flex-col items-center pt-16 pb-16">
-                    <SkillCard skills={skillsData} />
+                    <main className="w-full flex justify-start flex-row flex-wrap px-56 py-16 gap-9">
+                        <SkillCard skills={skillsData} />
+                    </main>
                     <div className="border-t border-white w-[70%]"></div>
-                    <SkillCard skills={skillsBisData} />
+                    <main className="w-full flex justify-start flex-row flex-wrap px-56 py-16 gap-9">
+                        <SkillCard skills={skillsBisData} />
+                    </main>
                 </div>
             </section>
             <section id="contact">

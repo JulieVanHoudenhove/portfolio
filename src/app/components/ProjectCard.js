@@ -19,7 +19,7 @@ const ProjectCard = ({ project, background, id }) => {
                     />
                 </div>
             </div>
-            <p className="text-xs">{project.description}</p>
+            <p className="text-xs msg-wrapper text-left">{project.subtitle}</p>
         </Link>
     );
 };
