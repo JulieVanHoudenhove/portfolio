@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Projet 1",
+        "title": "Roy Lunetier",
         "image": "https://via.placeholder.com/150",
         "image2": "https://via.placeholder.com/250",
         "image3": "https://via.placeholder.com/350",
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "title": "Projet 2",
+        "title": "Pokedex",
         "image": "https://via.placeholder.com/150",
         "image2": "https://via.placeholder.com/250",
         "image3": "https://via.placeholder.com/350",
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "title": "Projet 3",
+        "title": "Portfolio",
         "image": "https://via.placeholder.com/150",
         "image2": "https://via.placeholder.com/250",
         "image3": "https://via.placeholder.com/350",
@@ -31,7 +31,7 @@
     },
     {
         "id": 4,
-        "title": "Projet 4",
+        "title": "To Do List",
         "image": "https://via.placeholder.com/150",
         "image2": "https://via.placeholder.com/250",
         "image3": "https://via.placeholder.com/350",
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "title": "Projet 5",
+        "title": "Cyberfiction",
         "image": "https://via.placeholder.com/150",
         "image2": "https://via.placeholder.com/250",
         "image3": "https://via.placeholder.com/350",
@@ -51,7 +51,37 @@
     },
     {
         "id": 6,
-        "title": "Projet 6",
+        "title": "Studio Ghibli",
+        "image": "https://via.placeholder.com/150",
+        "image2": "https://via.placeholder.com/250",
+        "image3": "https://via.placeholder.com/350",
+        "description": "Description du projet 6",
+        "slug": "projet6",
+        "skills": [13]
+    },
+    {
+        "id": 7,
+        "title": "Elecar",
+        "image": "https://via.placeholder.com/150",
+        "image2": "https://via.placeholder.com/250",
+        "image3": "https://via.placeholder.com/350",
+        "description": "Description du projet 6",
+        "slug": "projet6",
+        "skills": [13]
+    },
+    {
+        "id": 8,
+        "title": "Sushi",
+        "image": "https://via.placeholder.com/150",
+        "image2": "https://via.placeholder.com/250",
+        "image3": "https://via.placeholder.com/350",
+        "description": "Description du projet 6",
+        "slug": "projet6",
+        "skills": [13]
+    },
+    {
+        "id": 9,
+        "title": "NSerie",
         "image": "https://via.placeholder.com/150",
         "image2": "https://via.placeholder.com/250",
         "image3": "https://via.placeholder.com/350",

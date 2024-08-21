@@ -4,6 +4,7 @@ import SkillCard from "@/app/components/SkillCard";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import ProjectCard from "@/app/components/ProjectCard";
+import Link from "next/link";
 
 export const metadata = {
     title: "oui - Julie VAN HOUDENHOVE",
@@ -34,7 +35,6 @@ export default async function ProjectPage({ params }) {
     const allSkills = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/skills.json`).then(res => res.json());
     const filteredSkills = allSkills.filter(skill => skills.includes(skill.name));
 
-    // Obtenir les autres projets
     const randomOtherProjects = await getOtherProjects(params.slug);
 
     return (
@@ -42,6 +42,14 @@ export default async function ProjectPage({ params }) {
             <Header />
             <section className="bg-cream pt-[152px]">
                 <h1 className="flex justify-center font-yipes text-2xl font-bold py-40">{project.title}</h1>
+                <div className='flex gap-1 px-32'>
+                    <Image src='/images/arrow_left.svg' alt='Icône de flèche vers la gauche' height={20} width={20} />
+                    <Link className='font-bold hover:opacity-70' href='/'>Accueil</Link>
+                    <p>/</p>
+                    <Link className='font-bold hover:opacity-70' href='/#projets'>Projets</Link>
+                    <p>/</p>
+                    <p>{project.title}</p>
+                </div>
                 <div className="flex">
                     <Image src={project.image} alt={project.title} width={600} height={400} />
                     <div>
@@ -60,8 +68,8 @@ export default async function ProjectPage({ params }) {
                 <section className="bg-blue-pattern text-white flex flex-col items-center">
                     <h2 className="font-yipes text-2xl py-32">Mais aussi</h2>
                     <div className="flex flex-wrap gap-4">
-                        {randomOtherProjects.map(otherProject => (
-                            <ProjectCard key={otherProject.id} project={otherProject} background={"blue-pattern"} />
+                        {randomOtherProjects.map((otherProject, index) => (
+                            <ProjectCard key={otherProject} project={otherProject} background={"blue-pattern"} id={index + 1}/>
                         ))}
                     </div>
                     <div className="h-40 w-full border-t border-white"></div>

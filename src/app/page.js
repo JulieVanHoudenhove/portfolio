@@ -133,10 +133,10 @@ export default function Home() {
                 </div>
             </section>
             <section id="projets" className="flex flex-col items-center bg-cream">
-                <h2 className="font-yipes text-2xl py-32">Projets</h2>
+                <h2 className="font-yipes text-2xl py-36">Projets</h2>
                 {projects.length > 0 ? (
-                    projects.map(project => (
-                        <ProjectCard key={project.id} project={project} />
+                    projects.map((project, index) => (
+                        <ProjectCard key={project.id} project={project} id={index + 1} />
                     ))
                 ) : (
                     <p>Loading projects...</p>
@@ -144,7 +144,7 @@ export default function Home() {
                 <div className="h-40 w-full border-t border-dark"></div>
             </section>
             <section id="competences" className="flex flex-col items-center bg-blue-pattern">
-                <h2 className="font-yipes text-2xl text-white pt-32">Compétences</h2>
+                <h2 className="font-yipes text-2xl text-white pt-36">Compétences</h2>
                 <div className="flex flex-col items-center pt-16 pb-16">
                     <SkillCard skills={skillsData} />
                     <div className="border-t border-white w-[70%]"></div>
