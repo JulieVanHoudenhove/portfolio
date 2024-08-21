@@ -31,104 +31,109 @@
   },
   {
     "id": 7,
+    "image": "gsap",
+    "name": "GSAP"
+  },
+  {
+    "id": 8,
     "image": "alpine_js",
     "name": "Alpine.js"
   },
   {
-    "id":  8,
+    "id": 9,
     "image": "vue_js",
     "name": "Vue.js"
   },
   {
-    "id":  9,
+    "id": 10,
     "image": "react",
     "name": "React.js"
   },
   {
-    "id": 10,
+    "id": 11,
     "image": "react",
     "name": "React Native"
   },
   {
-    "id": 11,
+    "id": 12,
     "image": "next_js",
     "name": "Next.js"
   },
   {
-    "id": 12,
+    "id": 13,
     "image": "svelte",
     "name": "Svelte"
   },
   {
-    "id": 13,
+    "id": 14,
     "image": "symfony",
     "name": "Symfony"
   },
   {
-    "id": 14,
+    "id": 15,
     "image": "twig",
     "name": "Twig"
   },
   {
-    "id": 15,
+    "id": 16,
     "image": "three_js",
     "name": "Three.js"
   },
   {
-    "id": 16,
+    "id": 17,
     "image": "docker",
     "name": "Docker"
   },
   {
-    "id": 17,
+    "id": 18,
     "image": "node_js",
     "name": "Node.js"
   },
   {
-    "id": 18,
+    "id": 19,
     "image": "git",
     "name": "Git"
   },
   {
-    "id": 19,
+    "id": 20,
     "image": "github_white",
     "name": "GitHub"
   },
   {
-    "id": 20,
+    "id": 21,
     "image": "storybook",
     "name": "Storybook"
   },
   {
-    "id": 21,
+    "id": 22,
     "name": "Atomic Design"
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "Component Design"
   },
   {
-    "id": 23,
+    "id": 24,
     "image": "figma",
     "name": "Figma"
   },
   {
-    "id": 24,
+    "id": 25,
     "image": "illustrator",
     "name": "Illustrator"
   },
   {
-    "id": 25,
+    "id": 26,
     "image": "photoshop",
     "name": "Photoshop"
   },
   {
-    "id": 26,
+    "id": 27,
     "image": "premiere_pro",
     "name": "Première Pro"
   },
   {
-    "id": 27,
+    "id": 28,
     "image": "after_effects",
     "name": "After Effects"
   }
