@@ -39,17 +39,17 @@ export default async function SitemapPage() {
                 <h1 className="flex justify-center font-yipes text-2xl font-bold py-40">Plan du site</h1>
                 <ul className="px-56 pb-32 text-xs">
                     {firstStaticPages.map((page, index) => (
-                        <li className="list-disc underline font-bold" key={index}>
+                        <li className="list-disc underline font-bold hover:opacity-70" key={index}>
                             <a href={page.loc}>{page.name}</a>
                         </li>
                     ))}
                     {dynamicPages.map((page, index) => (
-                        <li className="list-disc  mx-5 underline font-bold" key={index}>
+                        <li className="list-disc  mx-5 underline font-bold hover:opacity-70" key={index}>
                             <a href={page.loc}>{page.name}</a>
                         </li>
                     ))}
                     {secondStaticPages.map((page, index) => (
-                        <li className="list-disc underline font-bold" key={index}>
+                        <li className="list-disc underline font-bold hover:opacity-70" key={index}>
                             <a href={page.loc}>{page.name}</a>
                         </li>
                     ))}
