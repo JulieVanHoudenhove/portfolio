@@ -51,13 +51,15 @@ export default async function ProjectPage({ params }) {
                     <p>{project.title}</p>
                 </div>
             </section>
-            <section className="bg-cream flex flex-col gap-5 px-56 pb-32 text-xs">
-                <div className="flex gap-5">
-                    <img className="w-full h-auto object-cover" src={project.image} alt={project.title} />
-                    <div className="flex flex-col w-1/2">
-                        <div className="flex flex-col">
+            <section className="bg-cream flex flex-col gap-5 px-32 pb-32 text-xs">
+                <div className="flex gap-5 pt-8">
+                    <div className="w-1/2 flex items-center justify-center">
+                        <img src={project.image} alt={project.title} />
+                    </div>
+                    <div className="flex flex-col gap-8 w-1/2">
+                        <div className="flex flex-col gap-8">
                             <p className="font-medium text-md">Description</p>
-                            <p>{project.description1}</p>
+                            <p className="text-justify">{project.description1}</p>
                         </div>
                         {filteredSkills.length > 0 && (
                             <div className="flex gap-4 flex-wrap">
@@ -66,24 +68,24 @@ export default async function ProjectPage({ params }) {
                         )}
                     </div>
                 </div>
-                <Image src={project.image2} alt={project.title} width={600} height={400} />
+                <img src={project.image2} alt={project.title} />
                 <div className="flex">
-                    <div className="flex flex-col">
-                        <div className="flex flex-col">
-                            <p className="font-medium text-md">Pour aller plus loin</p>
-                            <p className="msg-wrapper">{project.description2}</p>
-                            {project.link1 ?
-                                <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link1}`}>{project.label1}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
-                            : ''}
-                            {project.link2 ?
-                                <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link2}`}>{project.label2}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
-                            : ''}
-                            {project.link3 ?
-                                <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link3}`}>{project.label3}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
-                            : ''}
-                        </div>
+                    <div className="flex flex-col gap-8 w-1/2">
+                        <p className="font-medium text-md">Pour aller plus loin</p>
+                        <p className="msg-wrapper text-justify">{project.description2}</p>
+                        {project.link1 ?
+                            <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link1}`}>{project.label1}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
+                        : ''}
+                        {project.link2 ?
+                            <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link2}`}>{project.label2}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
+                        : ''}
+                        {project.link3 ?
+                            <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link3}`}>{project.label3}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
+                        : ''}
                     </div>
-                    <Image src={project.image3} alt={project.title} width={600} height={400} />
+                    <div className="w-1/2 flex items-center justify-center">
+                        <img src={project.image3} alt={project.title} />
+                    </div>
                 </div>
             </section>
             {randomOtherProjects.length > 0 && (
