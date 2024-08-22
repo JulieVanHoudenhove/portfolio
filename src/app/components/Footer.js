@@ -76,7 +76,7 @@ const Footer = () => {
                     <div className="text-xs col-span-4 justify-self-end flex gap-2">
                         <Link href="/mentions-legales" className="font-bold text-xs underline hover:opacity-70 transition">Mentions Légales</Link>
                         <p>-</p>
-                        <Link href="/sitemap" className="font-bold text-xs underline hover:opacity-70 transition">Site Map</Link>
+                        <Link href="/plan-du-site" className="font-bold text-xs underline hover:opacity-70 transition">Plan du site </Link>
                     </div>
                 </div>
             </footer>

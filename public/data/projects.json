@@ -41,7 +41,7 @@
         "description1": "Actuellement, je travaille sur le développement de mon portfolio personnel en utilisant Next.js, une technologie que j'ai eu l'occasion de découvrir et d'apprendre au cours de ce projet. Avant de plonger dans le développement, j'ai conçu le visuel du site sur Figma, ce qui m'a permis de planifier une interface utilisateur esthétique et intuitive. Pour le développement, j'ai choisi Tailwind CSS, un framework qui facilite la création de designs modernes et réactifs. Ce projet m'a permis non seulement d'explorer Next.js, mais aussi de perfectionner mes compétences en design et en intégration avec Tailwind.",
         "description2": "À l'avenir, j'envisage d'ajouter un backoffice à ce portfolio pour gérer facilement les projets et les compétences affichés. Ce backoffice pourrait être développé en Symfony ou dans une autre technologie adaptée, selon les besoins du projet. Mon objectif est de créer un portfolio dynamique et évolutif qui reflète non seulement mes compétences techniques, mais aussi ma capacité à gérer et à développer des projets complexes de bout en bout.",
         "slug": "porfolio",
-        "link1": "https://github.com/JulieVanHoudenhove/porfolio",
+        "link1": "https://github.com/JulieVanHoudenhove/portfolio",
         "label1": "Lien vers le repository du projet",
         "skills": [5, 6, 12, 18, 20, 23, 24]
     },

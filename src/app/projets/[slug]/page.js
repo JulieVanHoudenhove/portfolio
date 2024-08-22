@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }) {
             <Header />
             <section className="bg-cream pt-[152px]">
                 <h1 className="flex justify-center font-yipes text-2xl font-bold py-40">{project.title}</h1>
-                <div className='flex gap-1 px-32'>
+                <div className='flex gap-1 px-32 text-xs'>
                     <Image src='/images/arrow_left.svg' alt='Icône de flèche vers la gauche' height={20} width={20} />
                     <Link className='font-bold hover:opacity-70' href='/'>Accueil</Link>
                     <p>/</p>
@@ -51,7 +51,7 @@ export default async function ProjectPage({ params }) {
                     <p>{project.title}</p>
                 </div>
             </section>
-            <section className="bg-cream flex flex-col gap-5 px-56 pb-32">
+            <section className="bg-cream flex flex-col gap-5 px-56 pb-32 text-xs">
                 <div className="flex gap-5">
                     <img className="w-full h-auto object-cover" src={project.image} alt={project.title} />
                     <div className="flex flex-col w-1/2">
