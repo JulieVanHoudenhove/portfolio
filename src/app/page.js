@@ -78,7 +78,7 @@ export default function Home() {
                             const slide = slides[index % slides.length];
                             return (
                                 <div className="slide" key={index}>
-                                    <Image className="p-2" width={38} height={48} src={slide.imgSrc} alt="étoile" />
+                                    <img className="p-2" src={slide.imgSrc} alt="étoile" />
                                     <p className="font-yipes font-sm px-6 py-1 text-white">{slide.text}</p>
                                 </div>
                             );
