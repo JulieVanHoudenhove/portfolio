@@ -31,7 +31,7 @@
     }
     &:hover {
         .projectCard__image {
-            @apply block transform transition duration-500 scale-125;
+            @apply hidden xl:block transform transition duration-500 scale-125;
         }
     }
 }
