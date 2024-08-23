@@ -19,6 +19,16 @@ async function getProjectPages() {
     }
 }
 
+export const metadata = {
+    title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
+    description: "Découvrez les projets web de Julie Van Houdenhove, spécialisée en développement full stack. Explorez mes réalisations en développement web.",
+    keywords: "portfolio, développeuse web, full stack, Julie Van Houdenhove, projets web",
+    author: "Julie Van Houdenhove",
+    image: "/images/favicon_star.svg",
+    url: "https://julie-vh.fr/",
+    type: "website",
+};
+
 export default async function SitemapPage() {
     const firstStaticPages = [
         { loc: '/', name: 'Accueil' },

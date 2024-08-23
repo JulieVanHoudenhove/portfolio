@@ -3,6 +3,16 @@ import Footer from "@/app/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+    title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web Full Stack",
+    description: "Découvrez les projets web de Julie Van Houdenhove, spécialisée en développement full stack. Explorez mes réalisations en développement web.",
+    keywords: "portfolio, développeuse web, full stack, Julie Van Houdenhove, projets web",
+    author: "Julie Van Houdenhove",
+    image: "/images/favicon_star.svg",
+    url: "https://julie-vh.fr/",
+    type: "website",
+};
+
 const MentionsLegales = () => {
     return (
         <>

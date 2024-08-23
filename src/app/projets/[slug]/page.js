@@ -7,8 +7,13 @@ import ProjectCard from "@/app/components/ProjectCard";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Projets - Julie VAN HOUDENHOVE",
-    description: "",
+    title: "Projets - Julie Van Houdenhove | Développeuse Web Full Stack",
+    description: "Découvrez les projets web de Julie Van Houdenhove, spécialisée en développement full stack. Explorez mes réalisations en développement web.",
+    keywords: "portfolio, développeuse web, full stack, Julie Van Houdenhove, projets web",
+    author: "Julie Van Houdenhove",
+    image: "/images/favicon_star.svg",
+    url: "https://julie-vh.fr/",
+    type: "website",
 };
 
 export default async function ProjectPage({ params }) {
