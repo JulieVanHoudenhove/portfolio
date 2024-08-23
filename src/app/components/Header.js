@@ -64,7 +64,7 @@ const Header = ({ background }) => {
     return (
         <header className={`fixed w-full z-40 ${background === 'blue-pattern' ? 'bg-blue-pattern' : 'bg-cream'}`}>
             <nav className={`flex justify-between items-center px-6 md:px-20 py-6 md:py-12 ${background === 'blue-pattern' ? 'text-white' : 'text-black'}`}>
-                <Link className="font-yipes text-md" href="/">Julie</Link>
+                <Link className="font-yipes text-sm lg:text-md" href="/">Julie</Link>
                 <div className="lg:hidden">
                     <button ref={buttonRef} onClick={toggleMenu} className="focus:outline-none">
                         <Image
