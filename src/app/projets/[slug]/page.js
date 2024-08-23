@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 
 export default function ProjectPage({ params }) {
     const [project, setProject] = useState(null);
+    const [skills, setSkills] = useState([]);
     const [metadata, setMetadata] = useState(null);
     const [randomOtherProjects, setRandomOtherProjects] = useState([]);
 
@@ -35,6 +36,11 @@ export default function ProjectPage({ params }) {
                 url: `https://julie-vh.fr/projets/${params.slug}`,
                 type: "website",
             });
+
+            const skillsResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/skills.json`);
+            const allSkills = await skillsResponse.json();
+            const projectSkills = allSkills.filter(skill => projectData.skills.includes(skill.id));
+            setSkills(projectSkills);
 
             const filteredProjects = projects.filter(proj => proj.slug !== params.slug);
             const randomProjects = filteredProjects.sort(() => 0.5 - Math.random()).slice(0, 3);
@@ -82,9 +88,9 @@ export default function ProjectPage({ params }) {
                                 <h2 className="font-medium text-sm lg:text-md">Description</h2>
                                 <p>{project.description1}</p>
                             </div>
-                            {project.skills.length > 0 && (
+                            {skills.length > 0 && (
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                                    <SkillCard skills={project.skills} size="md" />
+                                    <SkillCard skills={skills} size="md" />
                                 </div>
                             )}
                         </div>
