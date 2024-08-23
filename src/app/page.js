@@ -56,9 +56,9 @@ export default function Home() {
                         <Image className="absolute bottom-[60px] -left-12 lg:bottom-8 lg:-left-1/2" src="/images/old_pc.png" width={306} height={206} alt="un vieux PC en 3D" />
                     </div>
                     <div className="flex flex-col gap-6 items-start text-white">
-                        <h1 className="font-yipes text-xl lg:text-2xl">Julie<br />Van Houdenhove</h1>
+                        <h1 className="font-yipes text-xl lg:text-2xl">Julie <br />Van Houdenhove</h1>
                         <div className="flex flex-col gap-4">
-                            <p className="text-sm lg:text-md font-medium">Développeuse web</p>
+                            <h2 className="text-sm lg:text-md font-medium">Développeuse web</h2>
                             <p className="text-2xs lg:text-xs max-w-[739px]">Étudiante en développement web, je suis aussi développeuse frontend en alternance. J’aime relever des défis techniques et donner vie à des projets web à la fois élégants et fonctionnels.</p>
                         </div>
                         <Link target="_blank" href="/pdf/CV_Julie_VAN_HOUDENHOVE.pdf" className="font-bold text-2xs lg:text-xs underline hover:opacity-70 transition flex gap-2">Téléchargez mon CV sans hésiter !<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>

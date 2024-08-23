@@ -9,7 +9,7 @@ const ProjectCard = ({ project, background, id }) => {
             <div className="relative flex gap-64 items-center">
                 <p className="hidden md:block font-medium text-md lg:text-lg">{id}</p>
                 <div className="flex gap-16 items-center">
-                    <p className="text-lg lg:text-xl font-yipes">{project.title}</p>
+                    <h3 className="text-lg lg:text-xl font-yipes">{project.title}</h3>
                     <Image
                         src={project.image}
                         alt={project.title}

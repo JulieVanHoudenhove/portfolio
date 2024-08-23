@@ -36,9 +36,9 @@ const Footer = () => {
                     <p className="text-xs col-span-12 lg:col-span-5">© Julie VH - 2024</p>
                     <Link className="col-span-12 lg:col-span-2 justify-self-center" href="/"><Image height={62} width={42} src="/images/double_stars.svg" alt="deux étoiles" /></Link>
                     <div className="text-xs col-span-12 lg:col-span-5 lg:justify-end flex flex-col items-center lg:flex-row gap-2 w-full">
-                        <Link href="/mentions-legales" className="font-bold text-xs underline hover:opacity-70 transition">Mentions Légales</Link>
+                        <Link href="/mentions-legales" className="font-bold text-xs underline hover:opacity-70 transition"><h2>Mentions Légales</h2></Link>
                         <p className="hidden lg:block">-</p>
-                        <Link href="/plan-du-site" className="font-bold text-xs underline hover:opacity-70 transition">Plan du site </Link>
+                        <Link href="/plan-du-site" className="font-bold text-xs underline hover:opacity-70 transition"><h2>Plan du site</h2></Link>
                     </div>
                 </div>
             </footer>

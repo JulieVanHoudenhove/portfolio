@@ -79,7 +79,7 @@ export default function ProjectPage({ params }) {
                         </div>
                         <div className="flex flex-col gap-8 w-full lg:w-1/2">
                             <div className="flex flex-col gap-8">
-                                <p className="font-medium text-sm lg:text-md">Description</p>
+                                <h2 className="font-medium text-sm lg:text-md">Description</h2>
                                 <p>{project.description1}</p>
                             </div>
                             {project.skills.length > 0 && (
@@ -92,7 +92,7 @@ export default function ProjectPage({ params }) {
                     <img src={project.image2} alt={project.title} />
                     <div className="flex flex-col lg:flex-row gap-8">
                         <div className="flex flex-col gap-8 w-full lg:w-1/2">
-                            <p className="font-medium text-sm lg:text-md">Pour aller plus loin</p>
+                            <h2 className="font-medium text-sm lg:text-md">Pour aller plus loin</h2>
                             <p className="msg-wrappery">{project.description2}</p>
                             {project.link1 &&
                                 <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link1}`}>{project.label1}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
