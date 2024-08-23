@@ -62,7 +62,7 @@ export default async function ProjectPage({ params }) {
                             <p>{project.description1}</p>
                         </div>
                         {filteredSkills.length > 0 && (
-                            <div className="flex gap-4 flex-wrap">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                                 <SkillCard skills={filteredSkills} size="md" />
                             </div>
                         )}
