@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
             </div>
             <footer id="contact" className="flex flex-col items-center bg-cream">
-                <h2 className="font-yipes text-2xl px-16 lg:px-32 py-32">Comment puis-je vous aider ?</h2>
+                <h2 className="font-yipes text-2xl px-16 lg:px-32 py-32 text-center">Comment puis-je vous aider ?</h2>
                 <div className="flex flex-col gap-4 items-start w-full px-16 lg:px-32 pb-20">
                     <p className="text-xs max-w-[739px]">Prête à vous accompagner dans vos projets web ! Si vous avez des questions ou souhaitez discuter, contactez-moi par email ou via mes réseaux sociaux.</p>
                     <Link href="mailto:julie.vanhoudenhove@gmail.com" className="font-bold text-xs underline hover:opacity-70 transition flex gap-2">Écrivez-moi un email !<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
