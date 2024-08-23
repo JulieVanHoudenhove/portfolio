@@ -4,63 +4,25 @@ import Image from 'next/image';
 import Link from "next/link";
 
 const Footer = () => {
+    const slides = [
+        { text: "Disponible pour du freelance", imgSrc: "/images/swiper_star.svg" },
+    ];
+
+    const numOfSlides = 12;
 
     return (
         <>
             <div className="slider">
                 <div className="slide-track">
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
-                    <div className="slide">
-                        <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                        <p className="font-yipes font-sm px-6 py-1 text-white">Disponible pour du freelance</p>
-                    </div>
+                    {Array.from({ length: numOfSlides }).map((_, index) => {
+                        const slide = slides[index % slides.length];
+                        return (
+                            <div className="slide" key={index}>
+                                <Image className="p-2" width={38} height={48} src={slide.imgSrc} alt="étoile" />
+                                <p className="font-yipes font-sm px-6 py-1 text-white">{slide.text}</p>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
             <footer id="contact" className="flex flex-col items-center bg-cream">

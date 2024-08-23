@@ -37,6 +37,15 @@ export default function Home() {
         fetchProjects();
     }, []);
 
+    const slides = [
+        { text: "Web Developer", imgSrc: "/images/swiper_star.svg" },
+        { text: "Mobile App Developer", imgSrc: "/images/swiper_star.svg" },
+        { text: "Front-end developer", imgSrc: "/images/swiper_star.svg" },
+        { text: "Creative Developer", imgSrc: "/images/swiper_star.svg" },
+    ];
+
+    const numOfSlides = 12;
+
     return (
         <main>
             <Header background={"blue-pattern"} />
@@ -65,70 +74,15 @@ export default function Home() {
             <section id="a_propos">
                 <div className="slider-home">
                     <div className="slide-track">
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Web Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Mobile App Developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Front-end developer</p>
-                        </div>
-                        <div className="slide">
-                            <Image className="p-2" width={38} height={48} src="/images/swiper_star.svg" alt="étoile" />
-                            <p className="font-yipes font-sm px-6 py-1 text-white">Creative Developer</p>
-                        </div>
+                        {Array.from({ length: numOfSlides }).map((_, index) => {
+                            const slide = slides[index % slides.length];
+                            return (
+                                <div className="slide" key={index}>
+                                    <Image className="p-2" width={38} height={48} src={slide.imgSrc} alt="étoile" />
+                                    <p className="font-yipes font-sm px-6 py-1 text-white">{slide.text}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
