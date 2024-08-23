@@ -8,8 +8,8 @@ const MentionsLegales = () => {
         <>
             <Header />
             <section className="bg-cream lg:pt-[152px] px-8 lg:px-32">
-                <h1 className="flex justify-center font-yipes text-xl lg:text-2xl py-40 text-center">Mentions Légales</h1>
-                <div className='flex flex-col gap-9 pb-40'>
+                <h1 className="flex justify-center font-yipes text-xl lg:text-2xl pb-16 pt-40 lg:py-40 text-center">Mentions Légales</h1>
+                <div className='flex flex-col gap-9 pb-16 lg:pb-40'>
                     <div className="flex flex-col gap-6">
                         <h2 className="font-yipes text-lg lg:text-xl">1. Éditeur du site</h2>
                         <div className='flex flex-col gap-4'>

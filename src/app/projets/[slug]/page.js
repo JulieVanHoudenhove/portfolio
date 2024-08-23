@@ -90,13 +90,13 @@ export default async function ProjectPage({ params }) {
             </section>
             {randomOtherProjects.length > 0 && (
                 <section className="bg-blue-pattern text-white flex flex-col items-center">
-                    <h2 className="font-yipes text-xl lg:text-2xl py-32">Mais aussi</h2>
+                    <h2 className="font-yipes text-xl lg:text-2xl py-16 lg:py-32">Mais aussi</h2>
                     <div className="flex flex-wrap gap-4">
                         {randomOtherProjects.map((otherProject, index) => (
                             <ProjectCard key={otherProject} project={otherProject} background={"blue-pattern"} id={index + 1}/>
                         ))}
                     </div>
-                    <div className="h-40 w-full border-t border-white"></div>
+                    <div className="h-16 lg:h-40 w-full border-t border-white"></div>
                 </section>
             )}
             <Footer />
