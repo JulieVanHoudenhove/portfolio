@@ -44,9 +44,9 @@ export default async function ProjectPage({ params }) {
                 <h1 className="flex justify-center font-yipes text-xl lg:text-2xl font-bold py-40">{project.title}</h1>
                 <div className='flex gap-1 px-8 lg:px-32 text-2xs lg:text-xs'>
                     <Image src='/images/arrow_left.svg' alt='Icône de flèche vers la gauche' height={20} width={20} />
-                    <Link className='font-bold hover:opacity-70' href='/'>Accueil</Link>
+                    <Link className='font-bold hover:opacity-70 underline' href='/'>Accueil</Link>
                     <p>/</p>
-                    <Link className='font-bold hover:opacity-70' href='/#projets'>Projets</Link>
+                    <Link className='font-bold hover:opacity-70 underline' href='/#projets'>Projets</Link>
                     <p>/</p>
                     <p>{project.title}</p>
                 </div>
