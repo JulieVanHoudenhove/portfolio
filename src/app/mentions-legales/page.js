@@ -4,12 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-    title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web Full Stack",
-    description: "Découvrez les projets web de Julie Van Houdenhove, spécialisée en développement full stack. Explorez mes réalisations en développement web.",
-    keywords: "portfolio, développeuse web, full stack, Julie Van Houdenhove, projets web",
+    title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web",
+    description: "Consultez les mentions légales du site de Julie Van Houdenhove, développeuse web. Découvrez les informations légales, les conditions d'utilisation, et les responsabilités liées à l'utilisation de ce site.",
+    keywords: "mentions légales, conditions d'utilisation, politique de confidentialité, Julie Van Houdenhove, développeuse web",
     author: "Julie Van Houdenhove",
     image: "/images/favicon_star.svg",
-    url: "https://julie-vh.fr/",
+    url: "https://julie-vh.fr/mentions-legales",
     type: "website",
 };
 

@@ -2,9 +2,9 @@ import "./globals.scss";
 import Cursor from "@/app/components/Cursor";
 
 export const metadata = {
-    title: "Accueil - Julie Van Houdenhove | Développeuse Web Full Stack",
-    description: "Bienvenue sur la page d'accueil du portfolio de Julie Van Houdenhove, développeuse web full stack.",
-    keywords: "portfolio, développeuse web, full stack, Julie Van Houdenhove, projets web",
+    title: "Accueil - Julie Van Houdenhove | Développeuse Web",
+    description: "Bienvenue sur le portfolio de Julie Van Houdenhove, développeuse web. Découvrez mes compétences, projets et réalisations en développement web et mobile.",
+    keywords: "accueil, portfolio, développeuse web, full stack, front-end, back-end, Julie Van Houdenhove, projets web, développement mobile",
     author: "Julie Van Houdenhove",
     image: "/images/favicon_star.svg",
     url: "https://julie-vh.fr/",

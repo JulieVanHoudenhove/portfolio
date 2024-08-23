@@ -21,11 +21,11 @@ async function getProjectPages() {
 
 export const metadata = {
     title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
-    description: "Découvrez les projets web de Julie Van Houdenhove, spécialisée en développement full stack. Explorez mes réalisations en développement web.",
-    keywords: "portfolio, développeuse web, full stack, Julie Van Houdenhove, projets web",
+    description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
+    keywords: "plan du site, navigation, Julie Van Houdenhove, développeuse web, sitemap",
     author: "Julie Van Houdenhove",
     image: "/images/favicon_star.svg",
-    url: "https://julie-vh.fr/",
+    url: "https://julie-vh.fr/plan-du-site",
     type: "website",
 };
 
