@@ -145,12 +145,12 @@ export default function Home() {
             </section>
             <section id="competences" className="flex flex-col items-center bg-blue-pattern">
                 <h2 className="font-yipes text-2xl text-white pt-36">Compétences</h2>
-                <div className="flex flex-col items-center pt-16 pb-16">
-                    <main className="w-full flex justify-start flex-row flex-wrap px-56 py-16 gap-9">
+                <div className="flex flex-col items-center pt-16 pb-16 px-32">
+                    <main className="w-full flex justify-start flex-row flex-wrap py-16 gap-9">
                         <SkillCard skills={skillsData} />
                     </main>
-                    <div className="border-t border-white w-[70%]"></div>
-                    <main className="w-full flex justify-start flex-row flex-wrap px-56 py-16 gap-9">
+                    <div className="border-t border-white w-full"></div>
+                    <main className="w-full flex justify-start flex-row flex-wrap py-16 gap-9">
                         <SkillCard skills={skillsBisData} />
                     </main>
                 </div>

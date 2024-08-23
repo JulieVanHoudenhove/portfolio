@@ -7,7 +7,7 @@ const MentionsLegales = () => {
     return (
         <>
             <Header />
-            <section className="bg-cream pt-[152px] px-56">
+            <section className="bg-cream pt-[152px] px-32">
                 <h1 className="flex justify-center font-yipes text-2xl font-bold py-40">Mentions Légales</h1>
                 <div className='flex flex-col gap-9 pb-40'>
                     <div className="flex flex-col gap-6">
