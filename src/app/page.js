@@ -63,10 +63,10 @@ export default function Home() {
                         </div>
                         <Link target="_blank" href="/pdf/CV_Julie_VAN_HOUDENHOVE.pdf" className="font-bold text-2xs lg:text-xs underline hover:opacity-70 transition flex gap-2">Téléchargez mon CV sans hésiter !<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
                         <div className="flex gap-4">
-                            <Image src="/images/computer.svg" height={71} width={72} alt="Icône d'ordinateur" />
-                            <Image src="/images/laptop.svg" height={71} width={72} alt="Icône d'ordinateur portable" />
-                            <Image src="/images/phone.svg" height={71} width={72} alt="Icône de smartphone" />
-                            <Image src="/images/tablet.svg" height={71} width={72} alt="Icône de tablette" />
+                            <img src="/images/computer.svg" className="w-[55px] sm:w-full" alt="Icône d'ordinateur" />
+                            <img src="/images/laptop.svg" className="w-[55px] sm:w-full" alt="Icône d'ordinateur portable" />
+                            <img src="/images/phone.svg" className="w-[55px] sm:w-full" alt="Icône de smartphone" />
+                            <img src="/images/tablet.svg" className="w-[55px] sm:w-full" alt="Icône de tablette" />
                         </div>
                     </div>
                 </div>
