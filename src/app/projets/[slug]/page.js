@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }) {
     return (
         <main>
             <Header />
-            <section className="bg-cream pt-[152px]">
+            <section className="bg-cream lg:pt-[152px]">
                 <h1 className="flex justify-center font-yipes text-xl lg:text-2xl font-bold py-40">{project.title}</h1>
                 <div className='flex gap-1 px-8 lg:px-32 text-2xs lg:text-xs'>
                     <Image src='/images/arrow_left.svg' alt='Icône de flèche vers la gauche' height={20} width={20} />
