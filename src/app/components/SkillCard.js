@@ -9,7 +9,7 @@ const Skills = ({ skills, size }) => {
                     {skill.image && (
                         <img className={`${size === 'md' ? 'w-8' : 'w-8 lg:w-[70px]'}`} src={`/images/${skill.image}.svg`} alt={`Icône ${skill.name}`} />
                     )}
-                    <p className={`text-white ${size === 'md' ? 'text-2xs' : 'text-2xs lg:text-xs'}`}>{skill.name}</p>
+                    <p className={`text-white text-center ${size === 'md' ? 'text-2xs' : 'text-2xs lg:text-xs'}`}>{skill.name}</p>
                 </div>
             ))}
         </>

@@ -77,7 +77,7 @@ const Header = ({ background }) => {
                         />
                     </button>
                 </div>
-                <ul ref={menuRef} className={`flex-col lg:flex-row justify-center items-center gap-8 lg:flex ${isMenuOpen ? 'flex' : 'hidden'} lg:static absolute top-full left-0 right-0 ${background === 'blue-pattern' ? 'text-white bg-blue-pattern' : 'text-black bg-cream'} lg:bg-transparent p-6 lg:p-0`}>
+                <ul ref={menuRef} className={`flex-col lg:flex-row justify-center items-center gap-8 text-xs lg:flex ${isMenuOpen ? 'flex' : 'hidden'} lg:static absolute top-full left-0 right-0 ${background === 'blue-pattern' ? 'text-white bg-blue-pattern' : 'text-black bg-cream'} lg:bg-transparent p-6 lg:p-0`}>
                     <li>
                         <Link className='px-6 py-1 flex items-center min-h-14 transition hover:opacity-70' href="/#a_propos" onClick={() => setIsMenuOpen(false)}>
                             À propos
