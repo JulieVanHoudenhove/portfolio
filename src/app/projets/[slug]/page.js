@@ -42,7 +42,7 @@ export default async function ProjectPage({ params }) {
             <Header />
             <section className="bg-cream pt-[152px]">
                 <h1 className="flex justify-center font-yipes text-2xl font-bold py-40">{project.title}</h1>
-                <div className='flex gap-1 px-32 text-xs'>
+                <div className='flex gap-1 px-8 lg:px-32 text-xs'>
                     <Image src='/images/arrow_left.svg' alt='Icône de flèche vers la gauche' height={20} width={20} />
                     <Link className='font-bold hover:opacity-70' href='/'>Accueil</Link>
                     <p>/</p>
@@ -51,12 +51,12 @@ export default async function ProjectPage({ params }) {
                     <p>{project.title}</p>
                 </div>
             </section>
-            <section className="bg-cream flex flex-col gap-8 px-32 pb-32 text-xs">
-                <div className="flex gap-8 pt-8">
-                    <div className="w-1/2 flex items-center justify-center">
+            <section className="bg-cream flex flex-col gap-8 px-8 lg:px-32 pb-32 text-xs">
+                <div className="flex flex-col lg:flex-row gap-8 pt-8">
+                    <div className="w-full lg:w-1/2 flex items-center justify-center">
                         <img src={project.image} alt={project.title} />
                     </div>
-                    <div className="flex flex-col gap-8 w-1/2">
+                    <div className="flex flex-col gap-8 w-full lg:w-1/2">
                         <div className="flex flex-col gap-8">
                             <p className="font-medium text-md">Description</p>
                             <p className="text-justify">{project.description1}</p>
@@ -69,8 +69,8 @@ export default async function ProjectPage({ params }) {
                     </div>
                 </div>
                 <img src={project.image2} alt={project.title} />
-                <div className="flex gap-8">
-                    <div className="flex flex-col gap-8 w-1/2">
+                <div className="flex flex-col lg:flex-row gap-8">
+                    <div className="flex flex-col gap-8 w-full lg:w-1/2">
                         <p className="font-medium text-md">Pour aller plus loin</p>
                         <p className="msg-wrapper text-justify">{project.description2}</p>
                         {project.link1 ?
@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }) {
                             <Link className='font-bold underline hover:opacity-70 transition flex gap-2' target="_blank" href={`${project.link3}`}>{project.label3}<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
                         : ''}
                     </div>
-                    <div className="w-1/2 flex items-center justify-center">
+                    <div className="w-full lg:w-1/2 flex items-center justify-center">
                         <img src={project.image3} alt={project.title} />
                     </div>
                 </div>
