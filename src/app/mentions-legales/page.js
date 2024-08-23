@@ -8,22 +8,22 @@ const MentionsLegales = () => {
         <>
             <Header />
             <section className="bg-cream pt-[152px] px-8 lg:px-32">
-                <h1 className="flex justify-center font-yipes text-2xl font-bold py-40 text-center">Mentions Légales</h1>
+                <h1 className="flex justify-center font-yipes text-xl lg:text-2xl font-bold py-40 text-center">Mentions Légales</h1>
                 <div className='flex flex-col gap-9 pb-40'>
                     <div className="flex flex-col gap-6">
-                        <h2 className="font-yipes text-xl font-bold">1. Éditeur du site</h2>
+                        <h2 className="font-yipes text-lg lg:text-xl font-bold">1. Éditeur du site</h2>
                         <div className='flex flex-col gap-4'>
-                            <p className='text-xs'><strong>Nom :</strong> Van Houdenhove Julie</p>
-                            <p className='text-xs'><strong>Adresse :</strong> 3, avenue Maurice de Vlaminck - 77680 Roissy-en-Brie</p>
-                            <p className='text-xs'><strong>Email :</strong> <Link href='mailto:julie.vanhoudenhove@gmail.com'>julie.vanhoudenhove@gmail.com</Link></p>
+                            <p className='text-xs2 lg:text-xs'><strong>Nom :</strong> Van Houdenhove Julie</p>
+                            <p className='text-xs2 lg:text-xs'><strong>Adresse :</strong> 3, avenue Maurice de Vlaminck - 77680 Roissy-en-Brie</p>
+                            <p className='text-xs2 lg:text-xs'><strong>Email :</strong> <Link href='mailto:julie.vanhoudenhove@gmail.com'>julie.vanhoudenhove@gmail.com</Link></p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-6">
-                        <h2 className="font-yipes text-xl font-bold">2. Hébergeur du site</h2>
+                        <h2 className="font-yipes text-lg lg:text-xl font-bold">2. Hébergeur du site</h2>
                         <div className='flex flex-col gap-4'>
-                            <p className='text-xs'><strong>Nom de l'hébergeur :</strong> PulseHeberg</p>
-                            <p className='text-xs'><strong>Adresse de l'hébergeur :</strong> 9, Boulevard de Strasbourg - 83000 Toulon</p>
-                            <p className='flex gap-1 text-xs'><strong>Site web :</strong> <Link className='flex gap-1' target='_blank' href='https://pulseheberg.com'>pulseheberg.com<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link></p>
+                            <p className='text-2xs lg:text-xs'><strong>Nom de l'hébergeur :</strong> PulseHeberg</p>
+                            <p className='text-2xs lg:text-xs'><strong>Adresse de l'hébergeur :</strong> 9, Boulevard de Strasbourg - 83000 Toulon</p>
+                            <p className='flex gap-1 text-2xs lg:text-xs'><strong>Site web :</strong> <Link className='flex gap-1' target='_blank' href='https://pulseheberg.com'>pulseheberg.com<Image src="/images/open_in_new.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link></p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-6">

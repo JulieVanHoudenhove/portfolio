@@ -36,8 +36,8 @@ export default async function SitemapPage() {
         <>
             <Header />
             <main className="bg-cream pt-[152px]">
-                <h1 className="flex justify-center font-yipes text-2xl font-bold py-40">Plan du site</h1>
-                <ul className="px-32 pb-32 text-xs">
+                <h1 className="flex justify-center font-yipes text-xl lg:text-2xl font-bold py-40">Plan du site</h1>
+                <ul className="px-32 pb-32 text-2xs lg:text-xs">
                     {firstStaticPages.map((page, index) => (
                         <li className="list-disc underline font-bold hover:opacity-70" key={index}>
                             <a href={page.loc}>{page.name}</a>
