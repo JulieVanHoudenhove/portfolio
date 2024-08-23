@@ -16,6 +16,27 @@
     font-weight: normal;
     font-style: italic;
 }
+@font-face {
+    font-family: 'Poppins';
+    src:
+            url('/fonts/poppins-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src:
+            url('/fonts/poppins-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src:
+            url('/fonts/poppins-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 * {
     @apply m-0 p-0 box-border font-poppins scroll-smooth;
