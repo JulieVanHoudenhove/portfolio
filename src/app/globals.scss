@@ -8,6 +8,7 @@
             url('/fonts/yipes.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Yipes';
@@ -15,6 +16,7 @@
             url('/fonts/yipes-italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
@@ -22,6 +24,7 @@
             url('/fonts/poppins-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
@@ -29,6 +32,7 @@
             url('/fonts/poppins-medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
@@ -36,6 +40,7 @@
             url('/fonts/poppins-bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
