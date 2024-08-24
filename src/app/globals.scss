@@ -51,7 +51,13 @@
     background-image: url('/images/blue_pattern.webp');
 }
 
-.projectCard {;
+.hidden-on-load {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+
+.projectCard {
     &__image {
         @apply hidden;
     }
@@ -138,6 +144,7 @@ $animationSpeed: 40s;
 
 body, html {
     cursor: none;
+    overflow-x: hidden;
 }
 
 #custom-cursor {

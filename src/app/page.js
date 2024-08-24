@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {useEffect, useLayoutEffect, useState} from 'react';
 import Header from "@/app/components/Header";
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import ProjectCard from "@/app/components/ProjectCard";
 import SkillCard from "@/app/components/SkillCard";
 import Link from "next/link";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
     const [skillsData, setSkillsData] = useState([]);
@@ -35,7 +39,64 @@ export default function Home() {
         fetchSkills();
         fetchSkillsBis();
         fetchProjects();
+
+        gsap.fromTo(".about-image.hidden-on-load",
+            { opacity: 0, x: -100 },
+            { opacity: 1, x: 0, duration: 1.5, ease: "power3.out", onStart: function() {
+                document.querySelector(".about-image").classList.remove("hidden-on-load");
+            }}
+        );
+
+        gsap.fromTo(".about-text.hidden-on-load > *",
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", stagger: 0.3, onStart: function() {
+                document.querySelector(".about-text").classList.remove("hidden-on-load");
+            }}
+        );
     }, []);
+
+    useEffect(() => {
+        gsap.fromTo(".projects-title",
+            { opacity: 0, y: -20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: "#projets",
+                    start: "top 50%",
+                    end: "top 60%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+    }, [projects]);
+
+    useLayoutEffect(() => {
+        const titles = document.querySelectorAll('.skills-title');
+        titles.forEach(title => {
+            title.style.opacity = '0';
+            title.style.transform = 'translateY(-20px)';
+        });
+
+        gsap.fromTo(".skills-title",
+            { opacity: 0, y: -20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".skills-title",
+                    start: "top 80%",
+                    end: "top 60%",
+                    toggleActions: "play none none reverse"
+                }
+            }
+        );
+    }, [skillsData, skillsBisData]);
 
     const slides = [
         { text: "Web Developer", imgSrc: "/images/swiper_star.svg" },
@@ -49,20 +110,20 @@ export default function Home() {
     return (
         <main>
             <Header background={"blue-pattern"} />
-            <section id="a_propos" className="lg:h-[95vh] flex justify-center items-center px-14 lg:px-0 pt-[152px] gap-8 bg-blue-pattern">
+            <section id="a_propos" className="about-section lg:h-[95vh] flex justify-center items-center px-14 lg:px-0 pt-[152px] gap-8 bg-blue-pattern">
                 <div className="flex flex-col-reverse lg:flex-row gap-8">
-                    <div className="relative flex justify-center lg:block pt-12 lg:pt-0 pb-32 lg:pb-0 ml-0 lg:ml-40">
+                    <div className="about-image hidden-on-load relative flex justify-center lg:block pt-12 lg:pt-0 pb-32 lg:pb-0 ml-0 lg:ml-40">
                         <Image className="rounded-3xl" src="/images/julie.webp" width={327} height={432} alt="Julie Van Houdenhove" />
                         <Image className="absolute bottom-[60px] -left-12 lg:bottom-8 lg:-left-1/2" src="/images/old_pc.webp" width={306} height={206} alt="un vieux PC en 3D" />
                     </div>
-                    <div className="flex flex-col gap-6 items-start text-white">
+                    <div className="about-text hidden-on-load flex flex-col gap-6 items-start text-white">
                         <h1 className="font-yipes text-xl lg:text-2xl">Julie <br />Van Houdenhove</h1>
                         <div className="flex flex-col gap-4">
                             <h2 className="text-sm lg:text-md font-medium">Développeuse web</h2>
                             <p className="text-2xs lg:text-xs max-w-[739px]">Étudiante en développement web, je suis aussi développeuse frontend en alternance. J’aime relever des défis techniques et donner vie à des projets web à la fois élégants et fonctionnels.</p>
                         </div>
-                        <Link target="_blank" href="/pdf/CV_Julie_VAN_HOUDENHOVE.pdf" className="font-bold text-2xs lg:text-xs underline hover:opacity-70 transition flex gap-2">Téléchargez mon CV sans hésiter !<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
-                        <div className="flex gap-4">
+                        <Link target="_blank" href="/pdf/CV_Julie_VAN_HOUDENHOVE.pdf" className="about-text hidden-on-load font-bold text-2xs lg:text-xs underline hover:opacity-70 transition flex gap-2">Téléchargez mon CV sans hésiter !<Image src="/images/open_in_new_white.svg" width={24} height={24} alt="Icône d'ouverture dans un nouvel onglet" /></Link>
+                        <div className="about-text hidden-on-load flex gap-4">
                             <img src="/images/computer.svg" className="w-[55px] sm:w-full" alt="Icône d'ordinateur" />
                             <img src="/images/laptop.svg" className="w-[55px] sm:w-full" alt="Icône d'ordinateur portable" />
                             <img src="/images/phone.svg" className="w-[55px] sm:w-full" alt="Icône de smartphone" />
@@ -87,10 +148,10 @@ export default function Home() {
                 </div>
             </section>
             <section id="projets" className="flex flex-col items-center bg-cream">
-                <h2 className="font-yipes text-xl lg:text-2xl py-16 lg:py-36">Projets</h2>
+                <h2 className="projects-title hidden-on-load font-yipes text-xl lg:text-2xl py-16 lg:py-36">Projets</h2>
                 {projects.length > 0 ? (
                     projects.map((project, index) => (
-                        <ProjectCard key={project.id} project={project} id={index + 1} />
+                        <ProjectCard key={project.id} project={project} id={index + 1} className="project-card hidden-on-load" />
                     ))
                 ) : (
                     <p>Loading projects...</p>
@@ -98,7 +159,7 @@ export default function Home() {
                 <div className="h-16 lg:h-40 w-full border-t border-dark"></div>
             </section>
             <section id="competences" className="flex flex-col items-center bg-blue-pattern">
-                <h2 className="font-yipes text-xl lg:text-2xl text-white pt-16 lg:pt-36">Compétences</h2>
+                <h2 className="skills-title hideen-on-load font-yipes text-xl lg:text-2xl text-white pt-16 lg:pt-36">Compétences</h2>
                 <div className="flex flex-col items-center lg:pt-16 lg:pb-16 px-16 lg:px-32">
                     <main className="w-full grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 flex-wrap py-16 gap-9">
                         <SkillCard skills={skillsData} />

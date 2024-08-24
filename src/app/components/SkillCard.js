@@ -23,6 +23,7 @@ Skills.propTypes = {
             image: PropTypes.string,
         })
     ).isRequired,
+    size: PropTypes.oneOf(['sm', 'md']).isRequired,
 };
 
 export default Skills;
