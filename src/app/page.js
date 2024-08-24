@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="flex flex-col-reverse lg:flex-row gap-8">
                     <div className="relative flex justify-center lg:block pt-12 lg:pt-0 pb-32 lg:pb-0 ml-0 lg:ml-40">
                         <Image className="rounded-3xl" src="/images/julie.webp" width={327} height={432} alt="Julie Van Houdenhove" />
-                        <Image className="absolute bottom-[60px] -left-12 lg:bottom-8 lg:-left-1/2" src="/images/old_pc.png" width={306} height={206} alt="un vieux PC en 3D" />
+                        <Image className="absolute bottom-[60px] -left-12 lg:bottom-8 lg:-left-1/2" src="/images/old_pc.webp" width={306} height={206} alt="un vieux PC en 3D" />
                     </div>
                     <div className="flex flex-col gap-6 items-start text-white">
                         <h1 className="font-yipes text-xl lg:text-2xl">Julie <br />Van Houdenhove</h1>
