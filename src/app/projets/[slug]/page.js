@@ -158,6 +158,22 @@ export default function ProjectPage({ params }) {
                     },
                 }
             );
+
+            gsap.fromTo(".other-title",
+                { opacity: 0, y: -20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: ".other-title",
+                        start: "top 80%",
+                        end: "top 60%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
         }
     }, [project]);
 
@@ -177,7 +193,7 @@ export default function ProjectPage({ params }) {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: ".other-title",
-                    start: "top 50%",
+                    start: "top 80%",
                     end: "top 60%",
                     toggleActions: "play none none reverse"
                 }
