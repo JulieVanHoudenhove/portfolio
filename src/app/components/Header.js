@@ -90,7 +90,7 @@ const Header = ({ background }) => {
             <nav className={`flex justify-between items-center px-6 md:px-20 py-6 md:py-12 ${background === 'blue-pattern' ? 'text-white' : 'text-black'}`}>
                 <Link className="menu-socials hidden-on-load font-yipes text-sm lg:text-md" href="/">Julie</Link>
                 <div className="lg:hidden menu-socials hidden-on-load">
-                    <button ref={buttonRef} onClick={toggleMenu} className="focus:outline-none">
+                    <button ref={buttonRef} onClick={toggleMenu} className="focus:outline-none flex items-center justify-center">
                         <Image
                             src={isMenuOpen
                                 ? `/images/menu_close${background === 'blue-pattern' ? '_white' : ''}.svg`
