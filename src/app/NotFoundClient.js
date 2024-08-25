@@ -19,7 +19,7 @@ export default function NotFoundClient() {
                 y: 0,
                 duration: 1,
                 stagger: 0.5,
-                ease: 'power2.out'
+                ease: 'power3.out'
             }
         );
     }, []);
