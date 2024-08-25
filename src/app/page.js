@@ -25,14 +25,14 @@ export default function Home() {
             const response = await fetch('/data/skills.json');
             const data = await response.json();
             setSkillsData(data);
-            setSkillsLoaded(true); // Met à jour l'état pour indiquer que les compétences sont chargées
+            setSkillsLoaded(true);
         };
 
         const fetchSkillsBis = async () => {
             const response = await fetch('/data/skills_bis.json');
             const data = await response.json();
             setSkillsBisData(data);
-            setSkillsBisLoaded(true); // Met à jour l'état pour indiquer que les compétences sont chargées
+            setSkillsBisLoaded(true);
         };
 
         const fetchProjects = async () => {
@@ -130,11 +130,11 @@ export default function Home() {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.4, // Réduit la durée de l'animation des cartes
-                    stagger: 0.1, // Réduit le délai entre les cartes
+                    duration: 0.4,
+                    stagger: 0.1,
                     ease: "power2.out",
                     scrollTrigger: {
-                        trigger: ".skills-content", // Assurez-vous que le trigger est correct
+                        trigger: ".skills-content",
                         start: "top 80%",
                         end: "top 40%",
                         toggleActions: "play none none reverse",

@@ -1,24 +1,25 @@
-"use client"
+import NotFoundClient from "./NotFoundClient";
 
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
-import Link from "next/link";
-
-export const metadata = {
-    title: "404 - Julie VAN HOUDENHOVE",
-    description: "La page n'a pas été trouvée",
-};
+export async function generateMetadata() {
+    return {
+        title: "Page non trouvée - Julie Van Houdenhove | Développeuse Web",
+        description: "La page que vous recherchez n'existe pas sur le site de Julie Van Houdenhove. Découvrez nos projets ou retournez à l'accueil pour continuer votre navigation.",
+        keywords: "erreur 404, page non trouvée, Julie Van Houdenhove, développement web, site internet",
+        openGraph: {
+            title: "Page non trouvée - Julie Van Houdenhove | Développeuse Web",
+            description: "La page que vous recherchez n'existe pas sur le site de Julie Van Houdenhove. Explorez nos projets ou revenez à l'accueil.",
+            images: [{ url: "/images/favicon_stars.svg" }],
+            type: "website",
+        },
+        twitter: {
+            card: "summary",
+            title: "Page non trouvée - Julie Van Houdenhove | Développeuse Web",
+            description: "La page que vous recherchez n'existe pas sur le site de Julie Van Houdenhove. Découvrez nos projets ou retournez à l'accueil.",
+            image: "/images/favicon_stars.svg",
+        },
+    };
+}
 
 export default function NotFound() {
-    return (
-        <>
-            <Header />
-            <div className="min-h-screen flex flex-col items-center justify-center bg-cream">
-                <h1 className="flex justify-center font-yipes text-xl lg:text-2xl font-bold">404</h1>
-                <p className="text-lg lg:text-xl mb-8">Oups ! Page non trouvée</p>
-                <Link href="/" className="font-bold text-2xs lg:text-xs underline hover:opacity-70 transition">Retourner à l'accueil</Link>
-            </div>
-            <Footer />
-        </>
-    );
+    return <NotFoundClient />;
 }

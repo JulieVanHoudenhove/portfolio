@@ -68,7 +68,7 @@
 
     &:hover {
         .projectCard__image {
-            @apply opacity-100 scale-100; // Révèle l'image et la ramène à sa taille normale
+            @apply opacity-100 scale-100;
         }
     }
 }
@@ -185,7 +185,7 @@ body, html {
     height: 60px;
 }
 a {
-    cursor: none; /* Enlève le curseur pointer par défaut */
+    cursor: none;
 }
 
 .msg-wrapper {

@@ -8,7 +8,7 @@ export const metadata = {
     openGraph: {
         title: "Accueil - Julie Van Houdenhove | Développeuse Web",
         description: "Bienvenue sur le portfolio de Julie Van Houdenhove, développeuse web. Découvrez mes compétences, projets et réalisations en développement web et mobile.",
-        url: `${process.env.NEXT_PUBLIC_API_URL}`,
+        url: 'https://www.julie-vh.fr/',
         type: "website",
         images: [{ url: "/images/favicon_star.svg" }],
     },

@@ -10,27 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export async function generateMetadata() {
-    return {
-        title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web",
-        description: "Consultez les mentions légales du site de Julie Van Houdenhove, développeuse web. Retrouvez les informations sur l'éditeur, l'hébergeur, et les droits de propriété intellectuelle.",
-        keywords: "mentions légales, Julie Van Houdenhove, développement web, site internet, propriété intellectuelle",
-        openGraph: {
-            title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web",
-            description: "Consultez les mentions légales du site de Julie Van Houdenhove, développeuse web. Retrouvez les informations sur l'éditeur, l'hébergeur, et les droits de propriété intellectuelle.",
-            url: `${process.env.NEXT_PUBLIC_API_URL}mentions-legales`,
-            type: "website",
-            images: [{ url: "/images/favicon_star.svg" }],
-        },
-        twitter: {
-            card: "summary",
-            title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web",
-            description: "Consultez les mentions légales du site de Julie Van Houdenhove, développeuse web. Retrouvez les informations sur l'éditeur, l'hébergeur, et les droits de propriété intellectuelle.",
-            image: "/images/favicon_star.svg",
-        },
-    };
-}
-
 const MentionsLegales = () => {
 
     useEffect(() => {

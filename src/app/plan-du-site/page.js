@@ -11,7 +11,7 @@ export async function generateMetadata() {
         openGraph: {
             title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
             description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
-            url: `${process.env.NEXT_PUBLIC_API_URL}plan-du-site`,
+            url: 'https://www.julie-vh.fr/plan-du-site',
             type: "website",
             images: [{ url: "/images/favicon_star.svg" }],
         },

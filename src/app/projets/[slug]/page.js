@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
             title: `${project.title} - Julie Van Houdenhove | Développeuse Web`,
             keywords: `projet ${project.title}, développement web, full stack, front-end, back-end, compétences, Julie Van Houdenhove, technologies, réalisations`,
-            url: `${process.env.NEXT_PUBLIC_API_URL}projets/${params.slug}`,
+            url: `https://julie-vh.fr/projets/${params.slug}`,
             type: "website",
             images: [{ url: `images/${project.image1}` }],
         },
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
             card: "summary_large_image",
             title: `${project.title} - Julie Van Houdenhove | Développeuse Web`,
             keywords: `projet ${project.title}, développement web, full stack, front-end, back-end, compétences, Julie Van Houdenhove, technologies, réalisations`,
-            image: `${process.env.NEXT_PUBLIC_API_URL}images/${project.image1}`,
+            image: `images/${project.image1}`,
         },
     };
 }
@@ -39,12 +39,10 @@ export default async function ProjectPage({ params }) {
         notFound();
     }
 
-    // Récupérer les compétences liées au projet
     const skillsResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/skills.json`);
     const allSkills = await skillsResponse.json();
     const projectSkills = allSkills.filter(skill => project.skills.includes(skill.id));
 
-    // Récupérer d'autres projets aléatoires
     const projectsResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/projects.json`);
     const projects = await projectsResponse.json();
     const filteredProjects = projects.filter(proj => proj.slug !== params.slug);
