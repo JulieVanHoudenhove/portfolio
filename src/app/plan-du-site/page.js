@@ -1,6 +1,29 @@
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
+
+export async function generateMetadata() {
+    return {
+        title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
+        description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
+        keywords: "plan du site, navigation, Julie Van Houdenhove, développeuse web, sitemap",
+        author: "Julie Van Houdenhove",
+        openGraph: {
+            title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
+            description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
+            url: `${process.env.NEXT_PUBLIC_API_URL}plan-du-site`,
+            type: "website",
+            images: [{ url: "/images/favicon_star.svg" }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
+            description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
+            image: "/images/favicon_star.svg",
+        },
+    };
+}
+
 async function getProjectPages() {
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}data/projects.json`);
@@ -18,16 +41,6 @@ async function getProjectPages() {
         return [];
     }
 }
-
-export const metadata = {
-    title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
-    description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
-    keywords: "plan du site, navigation, Julie Van Houdenhove, développeuse web, sitemap",
-    author: "Julie Van Houdenhove",
-    image: "/images/favicon_star.svg",
-    url: "https://julie-vh.fr/plan-du-site",
-    type: "website",
-};
 
 export default async function SitemapPage() {
     const firstStaticPages = [

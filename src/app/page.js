@@ -62,11 +62,10 @@ export default function Home() {
                 opacity: 1,
                 y: 0,
                 duration: 1,
-                delay: 0.5,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: "#projets",
-                    start: "top 50%",
+                    start: "top 80%",
                     end: "top 60%",
                     toggleActions: "play none none reverse"
                 }
