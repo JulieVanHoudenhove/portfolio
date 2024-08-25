@@ -16,18 +16,23 @@ export default function Home() {
     const [skillsData, setSkillsData] = useState([]);
     const [skillsBisData, setSkillsBisData] = useState([]);
     const [projects, setProjects] = useState([]);
+    const [skillsLoaded, setSkillsLoaded] = useState(false);
+    const [skillsBisLoaded, setSkillsBisLoaded] = useState(false);
+
 
     useEffect(() => {
         const fetchSkills = async () => {
             const response = await fetch('/data/skills.json');
             const data = await response.json();
             setSkillsData(data);
+            setSkillsLoaded(true); // Met à jour l'état pour indiquer que les compétences sont chargées
         };
 
         const fetchSkillsBis = async () => {
             const response = await fetch('/data/skills_bis.json');
             const data = await response.json();
             setSkillsBisData(data);
+            setSkillsBisLoaded(true); // Met à jour l'état pour indiquer que les compétences sont chargées
         };
 
         const fetchProjects = async () => {
@@ -71,9 +76,31 @@ export default function Home() {
                 }
             }
         );
+        if (projects.length > 0) {
+            gsap.utils.toArray('.project-card').forEach((card, index) => {
+                gsap.fromTo(card,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        delay: index * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            toggleActions: "play none none reverse",
+                        }
+                    }
+                );
+            });
+        }
     }, [projects]);
 
     useLayoutEffect(() => {
+        if (!skillsLoaded) return;
+        if (!skillsBisLoaded) return;
+
         const titles = document.querySelectorAll('.skills-title');
         titles.forEach(title => {
             title.style.opacity = '0';
@@ -95,7 +122,27 @@ export default function Home() {
                 }
             }
         );
-    }, [skillsData, skillsBisData]);
+        if (skillsData.length > 0 || skillsBisData.length > 0) {
+            const skillCards = gsap.utils.toArray('.skill-card');
+
+            gsap.fromTo(skillCards,
+                { opacity: 0, y: -50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.4, // Réduit la durée de l'animation des cartes
+                    stagger: 0.1, // Réduit le délai entre les cartes
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: ".skills-content", // Assurez-vous que le trigger est correct
+                        start: "top 80%",
+                        end: "top 40%",
+                        toggleActions: "play none none reverse",
+                    }
+                }
+            );
+        }
+    }, [skillsLoaded, skillsBisLoaded]);
 
     const slides = [
         { text: "Web Developer", imgSrc: "/images/swiper_star.svg" },
@@ -155,17 +202,21 @@ export default function Home() {
                 ) : (
                     <p>Loading projects...</p>
                 )}
-                <div className="h-16 lg:h-40 w-full border-t border-dark"></div>
+                <div className="h-16 lg:h-40 w-full border-t border-dark project-card hidden-on-load"></div>
             </section>
             <section id="competences" className="flex flex-col items-center bg-blue-pattern">
-                <h2 className="skills-title hideen-on-load font-yipes text-xl lg:text-2xl text-white pt-16 lg:pt-36">Compétences</h2>
-                <div className="flex flex-col items-center lg:pt-16 lg:pb-16 px-16 lg:px-32">
+                <h2 className="skills-title hidden-on-load font-yipes text-xl lg:text-2xl text-white pt-16 lg:pt-36">Compétences</h2>
+                <div className="skills-content flex flex-col items-center lg:pt-16 lg:pb-16 px-16 lg:px-32">
                     <main className="w-full grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 flex-wrap py-16 gap-9">
-                        <SkillCard skills={skillsData} />
+                        {skillsData.map((skill) => (
+                            <SkillCard key={skill.name} skill={skill} className="skill-card hidden-on-load" />
+                        ))}
                     </main>
-                    <div className="border-t border-white w-full"></div>
+                    <div className="border-t border-white w-full skill-card"></div>
                     <main className="w-full grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 py-16 gap-9">
-                        <SkillCard skills={skillsBisData} />
+                        {skillsBisData.map((skill) => (
+                            <SkillCard key={skill.name} skill={skill} className="skill-card hidden-on-load" />
+                        ))}
                     </main>
                 </div>
             </section>

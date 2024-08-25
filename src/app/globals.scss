@@ -56,22 +56,19 @@
     transform: translateY(-20px);
 }
 
-/* Styles CSS pour cacher les éléments avant animation */
-.animated-element {
+.hidden-skill {
     opacity: 0;
-    transform: translateY(50px); /* Ajustez selon vos besoins */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(50px);
 }
-
-
 
 .projectCard {
     &__image {
-        @apply hidden;
+        @apply hidden xl:block transform transition duration-500 ease-out opacity-0 scale-90;
     }
+
     &:hover {
         .projectCard__image {
-            @apply hidden xl:block transform transition duration-500 scale-125;
+            @apply opacity-100 scale-100; // Révèle l'image et la ramène à sa taille normale
         }
     }
 }

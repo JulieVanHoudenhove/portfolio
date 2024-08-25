@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import gsap from "gsap";
 
 const Header = ({ background }) => {
     const [activeSection, setActiveSection] = useState('');
@@ -32,10 +33,32 @@ const Header = ({ background }) => {
         window.addEventListener('scroll', handleScroll);
         handleScroll();
 
+        gsap.fromTo(".menu-link.hidden-on-load > *",
+            { opacity: 0, y: -50 },
+            { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", stagger: 0.3, onStart: function() {
+                    document.querySelector(".menu-link").classList.remove("hidden-on-load");
+                }}
+        );
+
+        gsap.fromTo(".menu-socials",
+            { opacity: 0, y: -20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                stagger: 0.3,
+                onStart: function() {
+                    document.querySelector(".menu-socials").classList.remove("hidden-on-load");
+                }
+            }
+        );
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [currentPath]);
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -56,6 +79,7 @@ const Header = ({ background }) => {
         } else {
             document.removeEventListener('mousedown', handleClickOutside);
         }
+
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
@@ -64,8 +88,8 @@ const Header = ({ background }) => {
     return (
         <header className={`fixed w-full z-40 ${background === 'blue-pattern' ? 'bg-blue-pattern' : 'bg-cream'}`}>
             <nav className={`flex justify-between items-center px-6 md:px-20 py-6 md:py-12 ${background === 'blue-pattern' ? 'text-white' : 'text-black'}`}>
-                <Link className="font-yipes text-sm lg:text-md" href="/">Julie</Link>
-                <div className="lg:hidden">
+                <Link className="menu-socials hidden-on-load font-yipes text-sm lg:text-md" href="/">Julie</Link>
+                <div className="lg:hidden menu-socials hidden-on-load">
                     <button ref={buttonRef} onClick={toggleMenu} className="focus:outline-none">
                         <Image
                             src={isMenuOpen
@@ -77,7 +101,7 @@ const Header = ({ background }) => {
                         />
                     </button>
                 </div>
-                <ul ref={menuRef} className={`flex-col lg:flex-row justify-center items-center gap-8 text-xs lg:flex ${isMenuOpen ? 'flex' : 'hidden'} lg:static absolute top-full left-0 right-0 ${background === 'blue-pattern' ? 'text-white bg-blue-pattern' : 'text-black bg-cream'} lg:bg-transparent p-6 lg:p-0`}>
+                <ul ref={menuRef} className={`flex-col lg:flex-row justify-center items-center gap-8 text-xs lg:flex ${isMenuOpen ? 'flex' : 'hidden menu-link hidden-on-load'} lg:static absolute top-full left-0 right-0 ${background === 'blue-pattern' ? 'text-white bg-blue-pattern' : 'text-black bg-cream'} lg:bg-transparent p-6 lg:p-0`}>
                     <li>
                         <Link className='px-6 py-1 flex items-center min-h-14 transition hover:opacity-70' href="/#a_propos" onClick={() => setIsMenuOpen(false)}>
                             À propos
@@ -119,7 +143,7 @@ const Header = ({ background }) => {
                         </Link>
                     </li>
                 </ul>
-                <ul className="hidden xl:flex gap-10">
+                <ul className="menu-socials hidden-on-load hidden xl:flex gap-10">
                     <li><Link href="https://github.com/JulieVanHoudenhove" target="_blank"><Image className='hover:opacity-70 transition' src={`../images/github${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Logo GitHub" height={32} width={32} /></Link></li>
                     <li><Link href="https://www.linkedin.com/in/julie-van-houdenhove/" target="_blank"><Image className='hover:opacity-70 transition' src={`../images/linkedin${background === 'blue-pattern' ? '_white' : ''}.svg`} alt="Logo LinkedIn" height={32} width={32} /></Link></li>
                 </ul>

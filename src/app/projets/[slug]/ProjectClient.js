@@ -112,6 +112,29 @@ export default function ProjectClient({ project, skills, randomOtherProjects }) 
     }, [project]);
 
     useEffect(() => {
+        if (skills.length > 0) {
+            const skillCards = gsap.utils.toArray('.detail-skill-card');
+
+            gsap.fromTo(skillCards,
+                { opacity: 0, y: -50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.4,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: ".detail-skill-card",
+                        start: "top 80%",
+                        end: "top 40%",
+                        toggleActions: "play none none reverse",
+                    }
+                }
+            );
+        }
+    }, [skills]);
+
+    useEffect(() => {
         gsap.fromTo(
             ".other-title",
             { opacity: 0, y: -20 },
@@ -128,6 +151,25 @@ export default function ProjectClient({ project, skills, randomOtherProjects }) 
                 },
             }
         );
+        if (randomOtherProjects.length > 0) {
+            gsap.utils.toArray('.detail-project-card').forEach((card, index) => {
+                gsap.fromTo(card,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        delay: index * 0.1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 90%",
+                            toggleActions: "play none none reverse",
+                        }
+                    }
+                );
+            });
+        }
     }, [randomOtherProjects]);
 
     return (
@@ -168,7 +210,9 @@ export default function ProjectClient({ project, skills, randomOtherProjects }) 
                             </div>
                             {skills.length > 0 && (
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                                    <SkillCard skills={skills} size="md" />
+                                    {skills.map((skill, index) => (
+                                        <SkillCard skill={skill} size="md" className="detail-skill-card hidden-on-load" />
+                                    ))}
                                 </div>
                             )}
                         </div>
@@ -245,6 +289,7 @@ export default function ProjectClient({ project, skills, randomOtherProjects }) 
                                     project={otherProject}
                                     background={"blue-pattern"}
                                     id={index + 1}
+                                    className="detail-project-card hidden-on-load"
                                 />
                             ))}
                         </div>
