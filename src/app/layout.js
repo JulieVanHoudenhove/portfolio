@@ -27,6 +27,8 @@ export default function RootLayout({ children }) {
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" href="/images/favicon_star.svg" type="image/x-icon" sizes="16x16"/>
+                <meta property="og:image:width" content="600" />
+                <meta property="og:image:height" content="315" />
             </head>
             <body>
                 <Cursor />
