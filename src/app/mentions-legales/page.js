@@ -9,14 +9,14 @@ export async function generateMetadata() {
             title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web",
             description: "Consultez les mentions légales du site de Julie Van Houdenhove, développeuse web.",
             url: "https://julie-vh.fr/mentions-legales",
-            images: [{ url: "/images/favicon_star.svg" }],
+            images: [{ url: "/images/home_metadata_og.png" }],
             type: "website",
         },
         twitter: {
             card: "summary",
             title: "Mentions Légales - Julie Van Houdenhove | Développeuse Web",
             description: "Consultez les mentions légales du site de Julie Van Houdenhove, développeuse web.",
-            image: "/images/favicon_star.svg",
+            image: "/images/home_metadata_tw.png",
         },
     };
 }

@@ -10,13 +10,13 @@ export const metadata = {
         description: "Bienvenue sur le portfolio de Julie Van Houdenhove, développeuse web. Découvrez mes compétences, projets et réalisations en développement web et mobile.",
         url: 'https://www.julie-vh.fr/',
         type: "website",
-        images: [{ url: "/images/favicon_star.svg" }],
+        images: [{ url: "/images/home_metadata_og.png" }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Accueil - Julie Van Houdenhove | Développeuse Web",
         description: "Bienvenue sur le portfolio de Julie Van Houdenhove, développeuse web. Découvrez mes compétences, projets et réalisations en développement web et mobile.",
-        image: "/images/favicon_star.svg",
+        image: "/images/home_metadata_tw.png",
     },
 };
 

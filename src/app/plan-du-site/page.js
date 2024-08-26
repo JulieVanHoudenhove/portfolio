@@ -11,13 +11,13 @@ export async function generateMetadata() {
             description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
             url: 'https://www.julie-vh.fr/plan-du-site',
             type: "website",
-            images: [{ url: "/images/favicon_star.svg" }],
+            images: [{ url: "/images/home_metadata_og.png" }],
         },
         twitter: {
             card: "summary_large_image",
             title: "Plan du site - Julie Van Houdenhove | Développeuse Web Full Stack",
             description: "Explorez le plan du site de Julie Van Houdenhove, développeuse web. Accédez rapidement à toutes les sections et pages importantes du site.",
-            image: "/images/favicon_star.svg",
+            image: "/images/home_metadata_tw.png",
         },
     };
 }

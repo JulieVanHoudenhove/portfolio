@@ -21,13 +21,13 @@ export async function generateMetadata({ params }) {
             keywords: `projet ${project.title}, développement web, full stack, front-end, back-end, compétences, Julie Van Houdenhove, technologies, réalisations`,
             url: `https://julie-vh.fr/projets/${params.slug}`,
             type: "website",
-            images: [{ url: `images/${project.image1}` }],
+            images: [{ url: `images/${project.metadata}og.png` }],
         },
         twitter: {
             card: "summary_large_image",
             title: `${project.title} - Julie Van Houdenhove | Développeuse Web`,
             keywords: `projet ${project.title}, développement web, full stack, front-end, back-end, compétences, Julie Van Houdenhove, technologies, réalisations`,
-            image: `images/${project.image1}`,
+            image: `images/${project.metadata}_tw.png`,
         },
     };
 }
