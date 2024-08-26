@@ -2,13 +2,14 @@ import "./globals.scss";
 import Cursor from "@/app/components/Cursor";
 
 export const metadata = {
+    metadataBase: new URL('https://julie-vh.fr'),
     title: "Accueil - Julie Van Houdenhove | Développeuse Web",
     description: "Bienvenue sur le portfolio de Julie Van Houdenhove, développeuse web. Découvrez mes compétences, projets et réalisations en développement web et mobile.",
     keywords: "accueil, portfolio, développeuse web, full stack, front-end, back-end, Julie Van Houdenhove, projets web, développement mobile",
     openGraph: {
         title: "Accueil - Julie Van Houdenhove | Développeuse Web",
         description: "Bienvenue sur le portfolio de Julie Van Houdenhove, développeuse web. Découvrez mes compétences, projets et réalisations en développement web et mobile.",
-        url: 'https://www.julie-vh.fr/',
+        url: 'https://julie-vh.fr/',
         type: "website",
         images: [{ url: "/images/home_metadata_og.png" }],
     },
